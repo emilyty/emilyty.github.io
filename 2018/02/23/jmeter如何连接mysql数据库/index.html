@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>jmeter如何连接mysql数据库 | Emilyty | software</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#2E3032">
+    
+    
+    <meta name="keywords" content="jmeter">
+    <meta name="description" content="首先下载mysql驱动包（下载地址：http:&#x2F;&#x2F;download.csdn.net&#x2F;download&#x2F;emilyty&#x2F;9586858）。然后把mysql的驱动包放在jmeter的lib目录下。 jmeter如何连接mysql数据库 1、在测试计划里引入mysql驱动包  点击【浏览】按钮，在jmeter&#x2F;lib目录下选择mysql驱动包。如图所示：     2.添加线程组    选中测试计划-&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jmeter如何连接mysql数据库">
+<meta property="og:url" content="https://emilyty.github.io/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/index.html">
+<meta property="og:site_name" content="Emilyty">
+<meta property="og:description" content="首先下载mysql驱动包（下载地址：http:&#x2F;&#x2F;download.csdn.net&#x2F;download&#x2F;emilyty&#x2F;9586858）。然后把mysql的驱动包放在jmeter的lib目录下。 jmeter如何连接mysql数据库 1、在测试计划里引入mysql驱动包  点击【浏览】按钮，在jmeter&#x2F;lib目录下选择mysql驱动包。如图所示：     2.添加线程组    选中测试计划-&amp;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://emilyty.github.io/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/1.jpg">
+<meta property="og:image" content="https://emilyty.github.io/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/2.png">
+<meta property="og:image" content="https://emilyty.github.io/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/3.png">
+<meta property="og:image" content="https://emilyty.github.io/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/4.jpg">
+<meta property="og:image" content="https://emilyty.github.io/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/5.png">
+<meta property="og:image" content="https://emilyty.github.io/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/6.png">
+<meta property="article:published_time" content="2018-02-23T07:24:57.000Z">
+<meta property="article:modified_time" content="2020-11-14T08:24:49.045Z">
+<meta property="article:author" content="Emilyty">
+<meta property="article:tag" content="jmeter">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://emilyty.github.io/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/1.jpg">
+    
+        <link rel="alternate" type="application/atom+xml" title="Emilyty" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/back.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/header.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Emilyty</h5>
+          <a href="mailto:emilyty@163.com" title="emilyty@163.com" class="mail">emilyty@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/emilyty" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">jmeter如何连接mysql数据库</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">jmeter如何连接mysql数据库</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-02-23T07:24:57.000Z" itemprop="datePublished" class="page-time">
+  2018-02-23
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/">测试工具</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="post-toc-number">1.</span> <span class="post-toc-text">jmeter如何连接mysql数据库</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-jmeter如何连接mysql数据库"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">jmeter如何连接mysql数据库</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-02-23 15:24:57" datetime="2018-02-23T07:24:57.000Z"  itemprop="datePublished">2018-02-23</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/">测试工具</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>首先下载mysql驱动包（下载地址：<a target="_blank" rel="noopener" href="http://download.csdn.net/download/emilyty/9586858%EF%BC%89%E3%80%82">http://download.csdn.net/download/emilyty/9586858）。</a><br>然后把mysql的驱动包放在jmeter的lib目录下。</p>
+<h4 id="jmeter如何连接mysql数据库"><a href="#jmeter如何连接mysql数据库" class="headerlink" title="jmeter如何连接mysql数据库"></a><strong>jmeter如何连接mysql数据库</strong></h4><hr>
+<p><strong>1、在测试计划里引入mysql驱动包</strong></p>
+<p> 点击【浏览】按钮，在jmeter/lib目录下选择mysql驱动包。如图所示：</p>
+<p>   <img src="/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/1.jpg"></p>
+<p><strong>2.添加线程组</strong><br>    选中测试计划-&gt;右键-&gt;添加-&gt;Threads(Users)-&gt;线程组</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="2.png" alt="2" title="">
+                </div>
+                <div class="image-caption">2</div>
+            </figure>
+
+<p><strong>3.添加配置元件JDBC Connection Configuration</strong><br>    在线程组下添加JDBC Connection Configuration，添加方式如图所示：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="3.png" alt="3" title="">
+                </div>
+                <div class="image-caption">3</div>
+            </figure>
+
+<p><strong>4.配置JDBC Connection Configuration</strong></p>
+<blockquote>
+<p>   <strong>Variable Name：</strong> 变量名称，需要变量名绑定到池。需要唯一标识。与JDBC取样器中的相对应，决定JDBC取样的配置。简单理解就是在JDBC request的时候确定去哪个绑定的配置。</p>
+<p>   <strong>MaxNumber of Connection：</strong> 数据库最大链接数</p>
+<p>   <strong>PoolTimeout：</strong> 数据库链接超时，单位ms</p>
+<p>   <strong>Idle Cleanup Interval （ms）：</strong> 数据库空闲清理的间隔时间，单位ms</p>
+<p>   <strong>Auto Commit：</strong>自动提交。有三个选项，true、false、编辑（自己通过jmeter提供的函数设置）</p>
+<p>   <strong>Transaction Isolation：</strong>事务间隔级别设置，主要有如下几个选项：（对JMX加解密） TRANSACTION_REPEATABLE_READ事务重复读、TRANSACTION_READ_COMMITTED事务已提交读 TRANSACTION_SERIALIZABLE事务序列TRANSACTION_READ_UNCOMMITTED事务未提交读、TRANSACTION_NODE事务节点、DEFAULT默认、编辑</p>
+<p>   <strong>Keep-Alive：</strong> 是否保持连接</p>
+<p>   <strong>Max  Connection age （ms）：</strong>最大连接时长，超过时长的会被拒绝</p>
+<p>   <strong>Validation Query：</strong>验证查询，检验连接是否有效（数据库重启后之前的连接都失效，需要验证查询）</p>
+<p>   <strong>Database URL：</strong>如jdbc:mysql://localhost:3306/test，表示本地数据库，3306端口，请求访问的数据库名称为test，如果是远程数据库，例如数据库所在服务器IP为：192.168.11.120，请求的数据库名称为UserInfo，URL为dbc:mysql://192.168.11.120:3306/UserInfo</p>
+<p>   <strong>JDBCDriver Class：</strong> JDBC的类，如com.mysql.jdbc.Driver</p>
+</blockquote>
+<p><img src="/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/4.jpg" alt="4"></p>
+<p><strong>5.添加jdbc request</strong><br>    在线程组下添加sampler-&gt;jdbc request</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="5.png" alt="5" title="">
+                </div>
+                <div class="image-caption">5</div>
+            </figure>
+
+
+<pre><code>  jdbc request中填写sql语句。
+  注意：variable name必须跟JDBC Connection Configuration里设置的variable name一致。</code></pre>
+<p><img src="/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/6.png" alt="6"></p>
+<p><strong>6.查看结果</strong></p>
+<blockquote>
+<ul>
+<li>添加查看结果树，聚合报告。</li>
+<li>点击运行，运行结束后，查看结果。</li>
+</ul>
+</blockquote>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <footer>
+        <a href="https://emilyty.github.io">
+            <img src="/img/header.jpg" alt="Emilyty">
+            Emilyty
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jmeter/" rel="tag">jmeter</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://emilyty.github.io/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/&title=《jmeter如何连接mysql数据库》 — Emilyty&pic=https://emilyty.github.io/img/header.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://emilyty.github.io/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/&title=《jmeter如何连接mysql数据库》 — Emilyty&source=software" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://emilyty.github.io/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《jmeter如何连接mysql数据库》 — Emilyty&url=https://emilyty.github.io/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/&via=https://emilyty.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://emilyty.github.io/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2020/11/14/%E9%81%87%E5%88%B0%E7%9A%84%E8%BD%AF%E4%BB%B6%E9%9C%80%E6%B1%82%E8%AF%84%E5%AE%A1%E5%88%B0%E5%8F%91%E5%B8%83%E7%9A%84%E6%B5%81%E7%A8%8B/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">遇到的软件需求评审到发布的流程</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/02/23/jmeter%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%96%B9%E6%B3%95/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">jmeter连接mysql数据库的方法</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "9boq338fRwIVpDjInlL3jYE0-gzGzoHsz",
+            appKey: "OKTbIXukavfdcKw2c1MQyyfg",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        thanks
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Emilyty &copy; 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://emilyty.github.io/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/&title=《jmeter如何连接mysql数据库》 — Emilyty&pic=https://emilyty.github.io/img/header.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://emilyty.github.io/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/&title=《jmeter如何连接mysql数据库》 — Emilyty&source=software" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://emilyty.github.io/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《jmeter如何连接mysql数据库》 — Emilyty&url=https://emilyty.github.io/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/&via=https://emilyty.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://emilyty.github.io/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAAD+UlEQVR42u3aS27jQAwFQN//0g4w20Tye2TbyQClleEore7Sgubn8Yiv57/r6purz9/vT66r+69Wu//m8Y4LBw4cOHAER002d/Xg+wPk92+Ol/zv/RNx4MCBA8dZjvYBpzZ0Hz6ToL6hxIEDBw4cv8txn++0/5us06aFs/3jwIEDB47f4rh/ZFtS3BciT71OHDhw4MDxDo5NqS5PxmZh8h1NrAO1Uhw4cODA8XqHUfD7Hz+/cb4DBw4cOHCMwtWmBZWkhZvvk5Wj0+HAgQMHjjXHrNx2qtXUlgg3eygG73DgwIEDxyGO+wJfHtjuV87Lc7PBuzxg17MVOHDgwIFjFFPy0YFNirUpO+ZpXo2CAwcOHDiOcrThcFMuzMmSUNoSX66DAwcOHDjWHG1S146y5YN0m2B5Ki3EgQMHDhx7jjwFygPbZnwtOUzejsrD9g+/O3DgwIEDx4hjnyzlCVgbUJMEbIYe3Y8DBw4cOEYcs2LcbABif087NlG/ABw4cODAseZIErDPhOE2xG7CfPSLAwcOHDhwjDjy9lLb7Ml7XMkx8vLfbIjhslaKAwcOHDgWHHl6VqRD5RDb7GCbUTwcOHDgwHGWo93o7JF5qTHn3rye6EcADhw4cOAYceyTrmdw5QXEzRBeW6b8YZ84cODAgWPNcaysdvT+Dc1mfRw4cODAcZZjP3A2G5LYh882+Yx+WODAgQMHjhFH3mq6b9i04TYvGrZFybZNhQMHDhw43sfRFteSctsmm2xfVfuUy7YTDhw4cOA4xLEZO2jrbO38QB7yV6VDHDhw4MDx8S5MW7xr07l8+GB/tWMcOHDgwIEj4UgSoeSvm5JiWzRMBiPasiMOHDhw4DjFURTO4sGCos2zKDXOGlHtiXDgwIEDx4wjT67a1KuFyJnaQmR+Ihw4cODAcZZjP2SQbHHWymqHGIYpHA4cOHDgWHDkCdUs5Wu3lX+ejSxE8x04cODAgWPBsQmledluRtAePmlZ1ckkDhw4cOAYccyONGtNzUqKSaFw9tzL4iAOHDhw4Bhx7MPkbDDu1FFnYxOXT8eBAwcOHIc42uGAfOghaQ6dSvBmxcoXtVIcOHDgwFFy7ItxbbOqHZ5IAmo+4hCtjwMHDhw4Fus/y2vW2mlLjXkzKR+biJJPHDhw4MCx5sivYiaiDJYtU1uUbEcrcODAgQPHnmM/9JaHw+T+PKWcrf+iAIoDBw4cOA5xJIFqNnywYcqTrnZ9HDhw4MDxFzjyxk87dpCH9tmaRRsMBw4cOHB8nGOTXOUNrZwpKWIW6+DAgQMHjkMcZ4cY8jJf3sqajUq0SSkOHDhw4NhzbAYaNgdLkq5TY3M5MQ4cOHDgWHB8Afz6hym89o7wAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '随便一点，一天一点';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '测试经验分享';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Config参数化方法 | Emilyty | software</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#2E3032">
+    
+    
+    <meta name="keywords" content="jmeter">
+    <meta name="description" content="1.创建csv文件，把需要的参数写在一列中。不需要写变量名称，直接写变量值就可以。 2.线程组中添加CSV Data Set Config   如图所示： ​                3.设置CSV Data Set Config配置 ​               Filename中填写文件路径和文件名称。如果文件放在jmeter的bin目录下，直接写文件名称就可以。 Variable n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Config参数化方法">
+<meta property="og:url" content="https://emilyty.github.io/2016/01/14/Config%E5%8F%82%E6%95%B0%E5%8C%96%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:site_name" content="Emilyty">
+<meta property="og:description" content="1.创建csv文件，把需要的参数写在一列中。不需要写变量名称，直接写变量值就可以。 2.线程组中添加CSV Data Set Config   如图所示： ​                3.设置CSV Data Set Config配置 ​               Filename中填写文件路径和文件名称。如果文件放在jmeter的bin目录下，直接写文件名称就可以。 Variable n">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://emilyty.github.io/2016/01/14/Config%E5%8F%82%E6%95%B0%E5%8C%96%E6%96%B9%E6%B3%95/1-1.png">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://emilyty.github.io/2016/01/14/Config%E5%8F%82%E6%95%B0%E5%8C%96%E6%96%B9%E6%B3%95/1-2.png">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://emilyty.github.io/2016/01/14/Config%E5%8F%82%E6%95%B0%E5%8C%96%E6%96%B9%E6%B3%95/1-3.png">
+<meta property="article:published_time" content="2016-01-14T05:28:15.000Z">
+<meta property="article:modified_time" content="2020-11-14T07:56:04.353Z">
+<meta property="article:author" content="Emilyty">
+<meta property="article:tag" content="jmeter">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://emilyty.github.io/2016/01/14/Config%E5%8F%82%E6%95%B0%E5%8C%96%E6%96%B9%E6%B3%95/1-1.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="Emilyty" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/back.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/header.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Emilyty</h5>
+          <a href="mailto:emilyty@163.com" title="emilyty@163.com" class="mail">emilyty@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/emilyty" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Config参数化方法</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Config参数化方法</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2016-01-14T05:28:15.000Z" itemprop="datePublished" class="page-time">
+  2016-01-14
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/">测试工具</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+
+<article id="jmeter使用csv-Config参数化方法"
+  class="post-article article-type-jmeter使用csv fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Config参数化方法</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2016-01-14 13:28:15" datetime="2016-01-14T05:28:15.000Z"  itemprop="datePublished">2016-01-14</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/">测试工具</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>1.创建csv文件，把需要的参数写在一列中。不需要写变量名称，直接写变量值就可以。</p>
+<p>2.线程组中添加CSV Data Set Config</p>
+<p>  如图所示：</p>
+<p>​               <img src="/2016/01/14/Config%E5%8F%82%E6%95%B0%E5%8C%96%E6%96%B9%E6%B3%95/1-1.png" alt="1-1"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>3.设置CSV Data Set Config配置</p>
+<p>​              <img src="/2016/01/14/Config%E5%8F%82%E6%95%B0%E5%8C%96%E6%96%B9%E6%B3%95/1-2.png" alt="1-2"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>Filename中填写文件路径和文件名称。如果文件放在jmeter的bin目录下，直接写文件名称就可以。</p>
+<p>Variable names中填写自定义变量名称。</p>
+<p>Recycle on EOF：到了文件尾处，是否循环读取参数。</p>
+<p>Stop thread on EOF:到了文件尾处，是否停止线程。</p>
+<p>当Recycle on EOF选择true时，Stop threadon EOF选择true和false无任何意义，通俗的讲，在前面控制了不停的循环读取，后面再来让stop或run没有任何意义</p>
+<p>当Recycle on EOF选择false时，Stop threadon EOF选择true，线程4个，参数3个，那么只会请求3次</p>
+<p>当Recycle on EOF选择false时，Stop thread on EOF选择false，线程4个，参数3个，那么会请求4次，但第4次没有参数可取，不让循环，所以第4次请求错误</p>
+<p>4.参数化固定值</p>
+<p>需要使用变量的地方换成自定的变量名称，编写格式：${自定义的变量名称}，如图所示的格式填写：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="1-3.png" alt="1-3" title="">
+                </div>
+                <div class="image-caption">1-3</div>
+            </figure>
+
+<p>5.循环读取参数：</p>
+<p>   1）通过线程组循环</p>
+<p>Recycle on EOF和Stop thread on EOF进行设置，还需要把线程组的循环次数设置为需要的次数。</p>
+<p>   2）通过循环控制器循环</p>
+<p>如果使用循环控制器的话，可以把线程组设置为1，需要循环的次数在循环控制器中设置。配合着Recycle on EOF和Stop thread on EOF的设置使用。</p>
+<p>注：如果使用循环控制器，需要把CSV Data Set Config放在循环控制器下面。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <footer>
+        <a href="https://emilyty.github.io">
+            <img src="/img/header.jpg" alt="Emilyty">
+            Emilyty
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jmeter/" rel="tag">jmeter</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://emilyty.github.io/2016/01/14/Config%E5%8F%82%E6%95%B0%E5%8C%96%E6%96%B9%E6%B3%95/&title=《Config参数化方法》 — Emilyty&pic=https://emilyty.github.io/img/header.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://emilyty.github.io/2016/01/14/Config%E5%8F%82%E6%95%B0%E5%8C%96%E6%96%B9%E6%B3%95/&title=《Config参数化方法》 — Emilyty&source=software" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://emilyty.github.io/2016/01/14/Config%E5%8F%82%E6%95%B0%E5%8C%96%E6%96%B9%E6%B3%95/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Config参数化方法》 — Emilyty&url=https://emilyty.github.io/2016/01/14/Config%E5%8F%82%E6%95%B0%E5%8C%96%E6%96%B9%E6%B3%95/&via=https://emilyty.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://emilyty.github.io/2016/01/14/Config%E5%8F%82%E6%95%B0%E5%8C%96%E6%96%B9%E6%B3%95/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/02/23/jmeter%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%96%B9%E6%B3%95/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">jmeter连接mysql数据库的方法</h4>
+      </a>
+    </div>
+  
+
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "9boq338fRwIVpDjInlL3jYE0-gzGzoHsz",
+            appKey: "OKTbIXukavfdcKw2c1MQyyfg",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        thanks
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Emilyty &copy; 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://emilyty.github.io/2016/01/14/Config%E5%8F%82%E6%95%B0%E5%8C%96%E6%96%B9%E6%B3%95/&title=《Config参数化方法》 — Emilyty&pic=https://emilyty.github.io/img/header.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://emilyty.github.io/2016/01/14/Config%E5%8F%82%E6%95%B0%E5%8C%96%E6%96%B9%E6%B3%95/&title=《Config参数化方法》 — Emilyty&source=software" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://emilyty.github.io/2016/01/14/Config%E5%8F%82%E6%95%B0%E5%8C%96%E6%96%B9%E6%B3%95/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Config参数化方法》 — Emilyty&url=https://emilyty.github.io/2016/01/14/Config%E5%8F%82%E6%95%B0%E5%8C%96%E6%96%B9%E6%B3%95/&via=https://emilyty.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://emilyty.github.io/2016/01/14/Config%E5%8F%82%E6%95%B0%E5%8C%96%E6%96%B9%E6%B3%95/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADJElEQVR42u3a0Y7iMAwF0Pn/n2afV7Oge51WC+b0CZVO4pNKY2Ln5ye+Hk+uZ0/+/vzsTj5jPstlFzY2NvaHsB8vr9/PvCblIyS819E+W4LoJWFjY2OvY+epKIEliSfB5K8kt2BjY2Njt9MkC5E/cx4PNjY2NvZJMSgZLUlU+QYJGxsb+3vY+c/92RYiH2dWrrqxloaNjY399uw8Lb3/51v629jY2NhvzH6UV34o57yoNGsYRKNhY2NjL2LnCeC+oJPx23ZCFD82Njb2CnZegk++zRsASUt4tuWI/hYbGxv7a9jtliNfuHy0toUQtYGxsbGxV7NnTdwk3PM0dtkBIGxsbOzV7GToq47FnC/ZMN1iY2NjL2LnJfg8oJPGwFXNg0iBjY2NvYh9knJmB3RmrYV25Dw9Y2NjY38uO//53rZ4X28S8m/zFJg8j42Njb2P3U6cBNEmobyM1S5uUVTCxsbGXsE+Kdwkn/NCUtsSyBu9F5wAwsbGxn4zdvJPP1mgnNGO0BaMIhE2Njb2OnZSymnv5KlxtrGZxfbThoWNjY39Iey8BZunijaUNh3mIxR5GxsbG/sD2XcU4mfHIts2Q739uLv/gI2Njf2f2HmrtUgM5aHMdglmI/x1BxsbG3spOy+752Wp2Qh5w3jYcsDGxsZex24P7gyL8kGIbbKcvSpsbGzsTeykWHM+aF4qameZNR6wsbGx97FvaaOO0tJsQzIbExsbG3sf+6olmC1Hu42ZpVtsbGzsfeyTzUa7QPnBynaWvCiGjY2NvY+dY/LtQbsQJ2lvtmnBxsbG3sc+SQ9tKCeJrY0z2oFhY2Njr2PfcSxm1rKdFbyGXRFsbGzsRexZezXBX1wGOpgLGxsbexP75Kd/m/CS0lK7NMPlw8bGxl7EPsp75U//87CSRcxfDzY2NvYm9nlb96rlyxsPbdnrHzNiY2Njr2O3QczCnZ0nKs4c5ckPGxsb+4vZeZJI7rSp7rIiFzY2NvYXs/M0c20R//zAEDY2NvZudl7cP2kVtEvTNp5vaQ9gY2Njvz17WJQJij55iLPUlc8yPLiDjY2N/e7sP27hNmEvTqGlAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '随便一点，一天一点';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '测试经验分享';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
