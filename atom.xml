@@ -6,7 +6,7 @@
   <link href="http://emilyty.github.io/atom.xml" rel="self"/>
   
   <link href="http://emilyty.github.io/"/>
-  <updated>2020-11-13T13:58:39.766Z</updated>
+  <updated>2020-11-14T01:45:03.896Z</updated>
   <id>http://emilyty.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>softwareTestingProcess</title>
+    <link href="http://emilyty.github.io/2020/11/14/softwareTestingProcess/"/>
+    <id>http://emilyty.github.io/2020/11/14/softwareTestingProcess/</id>
+    <published>2020-11-14T01:39:46.000Z</published>
+    <updated>2020-11-14T01:45:03.896Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>从需求评审开始到发布上线的流程。</strong><br>1、<strong>需求评审</strong> - 产品经理讲解新的需求，开发和测试等相关人员参与评审。主要看需求是否完整，也可以提出各自的见解，例如需求是否合理，有没有更好的方案等等。如果需求存在大的漏洞，可以不通过，需要产品再次补充需求后再次评审。<br>2、<strong>任务拆分和评估</strong> - 把整个大的需求拆分成story，基于story进行评估。开发和测试主要评估完成需要的时间，测试负责人和开发负责人各自评估本投入的资源情况，如果不够或者多余的话进行重新协调和分配。<br>3、<strong>测试方案和用例设计</strong> - 设计测试方案和测试用例。测试用例建议对该模块熟悉的人来进行编写，并且测试用例设计方法进行统一。统一的好处是便于管理，坏处是可能缺少多样化和进步。对团队来讲的话好处多于坏处，统一后后续别人维护的时候更方便，思路和方法一致，不会出现看半天都不知道怎么设计的情况。<br>4、<strong>测试方案和用例评审</strong> - 方案和用例编写完成后需要同行评审，主要是相关模块的测试人员和测试主管，有条件的情况下可以要求开发和需求经理进行参与。多个部门的参与需要公司组基结构或者上层领导的支持。视情况而行，但是最好的情况下有开发和需求经理参与，可以保证对需求的理解一致，减少到测试节点才发现大家理解各异。<br>5、<strong>冒烟测试</strong> - 开发提测后先进行冒烟测试，如果冒烟不通过直接重新打开，解决后再次提测。为了避免重复reopen，可以提供冒烟测试用例给开发，执行通过后在提测，可以减少无效的执行次数。<br>6、<strong>系统测试</strong> - 进行系统测试。<br>7、<strong>测试报告</strong> - 测试完成后出测试报告。<br>8、<strong>预发布环境验证</strong> - 出测试报告后需要发布到预发布环境进行验证。原因是，测试环境验证通过后直接给项目进行升级或者新部署的时候发现升级失败或者部署失败的例子，为了避免这种情况，都需要在预发布环境进行升级。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;从需求评审开始到发布上线的流程。&lt;/strong&gt;&lt;br&gt;1、&lt;strong&gt;需求评审&lt;/strong&gt; - 产品经理讲解新的需求，开发和测试等相关人员参与评审。主要看需求是否完整，也可以提出各自的见解，例如需求是否合理，有没有更好的方案等等。如果需求存在大</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
