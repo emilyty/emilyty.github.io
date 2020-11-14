@@ -3,11 +3,11 @@
   <title>Emilyty</title>
   
   <subtitle>software</subtitle>
-  <link href="http://emilyty.github.io/atom.xml" rel="self"/>
+  <link href="https://emilyty.github.io/atom.xml" rel="self"/>
   
-  <link href="http://emilyty.github.io/"/>
+  <link href="https://emilyty.github.io/"/>
   <updated>2020-11-14T01:45:03.896Z</updated>
-  <id>http://emilyty.github.io/</id>
+  <id>https://emilyty.github.io/</id>
   
   <author>
     <name>Emilyty</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>softwareTestingProcess</title>
-    <link href="http://emilyty.github.io/2020/11/14/softwareTestingProcess/"/>
-    <id>http://emilyty.github.io/2020/11/14/softwareTestingProcess/</id>
+    <link href="https://emilyty.github.io/2020/11/14/softwareTestingProcess/"/>
+    <id>https://emilyty.github.io/2020/11/14/softwareTestingProcess/</id>
     <published>2020-11-14T01:39:46.000Z</published>
     <updated>2020-11-14T01:45:03.896Z</updated>
     
@@ -38,8 +38,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://emilyty.github.io/2020/11/13/hello-world/"/>
-    <id>http://emilyty.github.io/2020/11/13/hello-world/</id>
+    <link href="https://emilyty.github.io/2020/11/13/hello-world/"/>
+    <id>https://emilyty.github.io/2020/11/13/hello-world/</id>
     <published>2020-11-13T13:58:39.765Z</published>
     <updated>2020-11-13T13:58:39.766Z</updated>
     
