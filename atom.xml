@@ -6,7 +6,7 @@
   <link href="https://emilyty.github.io/atom.xml" rel="self"/>
   
   <link href="https://emilyty.github.io/"/>
-  <updated>2020-11-15T01:22:34.452Z</updated>
+  <updated>2020-11-15T03:39:08.605Z</updated>
   <id>https://emilyty.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>github+hexo搭建博客遇到的坑</title>
+    <link href="https://emilyty.github.io/2020/11/15/github-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/"/>
+    <id>https://emilyty.github.io/2020/11/15/github-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</id>
+    <published>2020-11-15T03:24:30.000Z</published>
+    <updated>2020-11-15T03:39:08.605Z</updated>
+    
+    <content type="html"><![CDATA[<p>搭建GitHub博客教程：<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html">https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html</a></p><p>为了防止失效，先截个图保存一下</p><img src="github+hexo搭建博客教程.png" alt="github+hexo搭建博客教程" style="zoom:1%;" /><p><strong>1、hexo init一直卡住无法继续</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br><span class="line">INFO  Cloning hexo-starter https:&#x2F;&#x2F;github.com&#x2F;hexojs&#x2F;hexo-starter.git </span><br></pre></td></tr></table></figure><p>出现这个问题的主要原因是安装源，可以重置安装源为taobao</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure><p>2、本地博客hexo d提交到GitHub后通过username.github.io访问页面空白</p><p>GitHub页面默认读的是main分支，所以把分支改为master分支就可。入口为仓库的settings。</p><img src="image-20201115113744828.png" alt="image-20201115113744828" style="zoom:33%;" />]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;搭建GitHub博客教程：&lt;a href=&quot;https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html&quot;&gt;https://www.cnblogs.com/liuxianan/p/bui</summary>
+      
+    
+    
+    
+    <category term="工具" scheme="https://emilyty.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="搭建GitHub博客" scheme="https://emilyty.github.io/tags/%E6%90%AD%E5%BB%BAGitHub%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo文章用Typora插入图片方法</title>
+    <link href="https://emilyty.github.io/2020/11/15/hexo%E6%96%87%E7%AB%A0%E7%94%A8Typora%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E6%96%B9%E6%B3%95/"/>
+    <id>https://emilyty.github.io/2020/11/15/hexo%E6%96%87%E7%AB%A0%E7%94%A8Typora%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E6%96%B9%E6%B3%95/</id>
+    <published>2020-11-15T03:04:01.000Z</published>
+    <updated>2020-11-15T03:26:21.181Z</updated>
+    
+    <content type="html"><![CDATA[<p>Typora是一个markdown编辑器，可以直接贴入图片。配置如下</p><p>首先修改根目录的_config.yml文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure><p>通过<code>$ hexo new page1</code> 创建博客的时候source/_posts文件下生成一个同名文件夹</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">page1.md</span><br><span class="line">page1</span><br></pre></td></tr></table></figure><p>Typora偏好设置</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="image-20201115111213215.png" alt="image-20201115111213215" title="">                </div>                <div class="image-caption">image-20201115111213215</div>            </figure><p>图片粘贴到文件后生成图片路径，并且把图片复制到同名的文件夹里。默认的图片路径push到git后无法访问，需要修改文件路径。</p><p>默认生成的图片路径为<code>![tupian](page1/putian.jpg)</code>，把图片路径修改为<code> ![](tupian.jpg)</code>就可以进行访问了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Typora是一个markdown编辑器，可以直接贴入图片。配置如下&lt;/p&gt;
+&lt;p&gt;首先修改根目录的_config.yml文件&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;s</summary>
+      
+    
+    
+    
+    <category term="工具" scheme="https://emilyty.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="搭建GitHub博客" scheme="https://emilyty.github.io/tags/%E6%90%AD%E5%BB%BAGitHub%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>测试负责人都干了啥</title>
