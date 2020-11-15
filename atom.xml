@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Emilyty</title>
   
-  <subtitle>software</subtitle>
+  <subtitle>software testing</subtitle>
   <link href="https://emilyty.github.io/atom.xml" rel="self"/>
   
   <link href="https://emilyty.github.io/"/>
-  <updated>2020-11-14T07:33:16.373Z</updated>
+  <updated>2020-11-15T01:22:34.452Z</updated>
   <id>https://emilyty.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试负责人都干了啥</title>
+    <link href="https://emilyty.github.io/2020/11/14/%E4%BB%8E%E6%B5%8B%E8%AF%95%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%88%B0%E6%B5%8B%E8%AF%95%E8%B4%9F%E8%B4%A3%E4%BA%BA/"/>
+    <id>https://emilyty.github.io/2020/11/14/%E4%BB%8E%E6%B5%8B%E8%AF%95%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%88%B0%E6%B5%8B%E8%AF%95%E8%B4%9F%E8%B4%A3%E4%BA%BA/</id>
+    <published>2020-11-14T09:44:29.000Z</published>
+    <updated>2020-11-15T01:22:34.452Z</updated>
+    
+    <content type="html"><![CDATA[<p>​        作为测试负责人需要有大局观，对长期产品线来讲的话，产品发起需求沟通前主动询问产品规划，每个阶段需要完成的任务心里有数。根据产品规划协调资源，准备接任务。</p><p>​        下面再详细看看，作为测试负责人平时都干了什么活儿……</p><p><font size=5><strong>需求沟通阶段</strong></font></p><p><strong>一. 需求规划阶段</strong></p><ul><li>找各个模块的产品经理获取产品规划书，对接下来要完成的任务有一个大概的范围</li><li>职能部门领导沟通工作量和时间节点，并提前申请部分测试资源</li></ul><p><strong>二. 需求沟通阶段</strong></p><ul><li><p>熟悉需求，并分析需求，有疑问的地方抛出问题，与产品共同讨论</p></li><li><p>组织相关人员拆分任务、评估时间和任务优先级</p></li><li><p>确认工作量、时间节点和相关可用资源</p></li><li><p>无法在迭代周期内完成的任务先找产品砍需求，不能砍的需求，让产品找职能部门申请更多的资源或者调整其它产品的优先级。</p></li></ul><hr><p><font size=5><strong>产品开发与测试阶段</strong></font></p><p><strong>一. 开发阶段</strong></p><ul><li>主动了解开发进度，每天发送进度报告，如有延期及时再邮件理提出</li><li>延期严重并跟开发本人沟通后，仍然不能解决的找相关负责人进行进一步的沟通</li></ul><p><strong>二. 测试阶段</strong></p><ol><li><p>提测前</p><ul><li>根据需求制定合适的测试方案和测试策略</li><li>合理分配任务</li><li>审核测试工程师测试用例</li><li>组织用例评审</li></ul></li><li><p>提测后</p><ul><li>关注风险/延期，以及质量和进度的平衡</li><li>跟踪测试进度，严格把控时间</li><li>把控产品质量，每个测试工程师提交缺陷情况</li><li>监控测试用例执行情况，有必要的情况下抽查测试</li><li>及时询问，如有问题主动推动解决</li><li>随时准备接收临时任务和拒绝</li><li>根据需求和提测情况确定回归测试方案   </li></ul></li></ol><hr><p><font size=5><strong>测试验收阶段</strong></font></p><ul><li>组织相关负责人处理遗留问题，确认风险</li><li>出测试报告</li><li>审核工程师测试报告和风险</li><li>组织升级测试 &amp; 跟踪升级测试结果</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;​        作为测试负责人需要有大局观，对长期产品线来讲的话，产品发起需求沟通前主动询问产品规划，每个阶段需要完成的任务心里有数。根据产品规划协调资源，准备接任务。&lt;/p&gt;
+&lt;p&gt;​        下面再详细看看，作为测试负责人平时都干了什么活儿……&lt;/p&gt;
+&lt;p&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="管理" scheme="https://emilyty.github.io/categories/%E7%AE%A1%E7%90%86/"/>
+    
+    
+    <category term="测试管理" scheme="https://emilyty.github.io/tags/%E6%B5%8B%E8%AF%95%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>遇到的软件需求评审到发布的流程</title>
@@ -52,7 +78,7 @@
     <link href="https://emilyty.github.io/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     <id>https://emilyty.github.io/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/</id>
     <published>2018-02-23T07:24:57.000Z</published>
-    <updated>2020-11-14T08:38:21.193Z</updated>
+    <updated>2020-11-14T09:28:14.335Z</updated>
     
     <content type="html"><![CDATA[<p>首先下载mysql驱动包（下载地址：<a href="http://download.csdn.net/download/emilyty/9586858%EF%BC%89%E3%80%82">http://download.csdn.net/download/emilyty/9586858）。</a><br>然后把mysql的驱动包放在jmeter的lib目录下。</p><p><strong>jmeter如何连接mysql数据库</strong> </p><hr><p><strong>1、在测试计划里引入mysql驱动包</strong></p><p> 点击【浏览】按钮，在jmeter/lib目录下选择mysql驱动包。如图所示：</p><p>   <img src="/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/1.jpg"></p><p><strong>2.添加线程组</strong><br>    选中测试计划-&gt;右键-&gt;添加-&gt;Threads(Users)-&gt;线程组</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="2.png" alt="2" title="">                </div>                <div class="image-caption">2</div>            </figure><p><strong>3.添加配置元件JDBC Connection Configuration</strong><br>    在线程组下添加JDBC Connection Configuration，添加方式如图所示：</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="3.png" alt="3" title="">                </div>                <div class="image-caption">3</div>            </figure><p><strong>4.配置JDBC Connection Configuration</strong></p><blockquote><p>   <strong>Variable Name：</strong> 变量名称，需要变量名绑定到池。需要唯一标识。与JDBC取样器中的相对应，决定JDBC取样的配置。简单理解就是在JDBC request的时候确定去哪个绑定的配置。</p><p>   <strong>MaxNumber of Connection：</strong> 数据库最大链接数</p><p>   <strong>PoolTimeout：</strong> 数据库链接超时，单位ms</p><p>   <strong>Idle Cleanup Interval （ms）：</strong> 数据库空闲清理的间隔时间，单位ms</p><p>   <strong>Auto Commit：</strong>自动提交。有三个选项，true、false、编辑（自己通过jmeter提供的函数设置）</p><p>   <strong>Transaction Isolation：</strong>事务间隔级别设置，主要有如下几个选项：（对JMX加解密） TRANSACTION_REPEATABLE_READ事务重复读、TRANSACTION_READ_COMMITTED事务已提交读 TRANSACTION_SERIALIZABLE事务序列TRANSACTION_READ_UNCOMMITTED事务未提交读、TRANSACTION_NODE事务节点、DEFAULT默认、编辑</p><p>   <strong>Keep-Alive：</strong> 是否保持连接</p><p>   <strong>Max  Connection age （ms）：</strong>最大连接时长，超过时长的会被拒绝</p><p>   <strong>Validation Query：</strong>验证查询，检验连接是否有效（数据库重启后之前的连接都失效，需要验证查询）</p><p>   <strong>Database URL：</strong>如jdbc:mysql://localhost:3306/test，表示本地数据库，3306端口，请求访问的数据库名称为test，如果是远程数据库，例如数据库所在服务器IP为：192.168.11.120，请求的数据库名称为UserInfo，URL为dbc:mysql://192.168.11.120:3306/UserInfo</p><p>   <strong>JDBCDriver Class：</strong> JDBC的类，如com.mysql.jdbc.Driver</p></blockquote><p><img src="/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/4.jpg" alt="4"></p><p><strong>5.添加jdbc request</strong><br>    在线程组下添加sampler-&gt;jdbc request</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="5.png" alt="5" title="">                </div>                <div class="image-caption">5</div>            </figure><pre><code>  jdbc request中填写sql语句。  注意：variable name必须跟JDBC Connection Configuration里设置的variable name一致。</code></pre><p><img src="/2018/02/23/jmeter%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5mysql%E6%95%B0%E6%8D%AE%E5%BA%93/6.png" alt="6"></p><p><strong>6.查看结果</strong></p><blockquote><ul><li>添加查看结果树，聚合报告。</li><li>点击运行，运行结束后，查看结果。</li></ul></blockquote>]]></content>
     
