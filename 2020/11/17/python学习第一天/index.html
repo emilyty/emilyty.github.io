@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>python学习第一天 | Emilyty | software testing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#2E3032">
+    
+    
+    <meta name="keywords" content="python">
+    <meta name="description" content="需要实现得需求：获取0时区（UTC）的时间；可以加减秒数；时间格式为 yyyy-MM-dd’T’HH：mm：ss.SSS 1234567import datetimenow &#x3D; datetime.datetime.utcnow()delta &#x3D; datetime.timedelta(seconds&#x3D;30) #加30秒n_seconds &#x3D; now + deltastart &#x3D; n_seconds.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python学习第一天">
+<meta property="og:url" content="https://emilyty.github.io/2020/11/17/python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/index.html">
+<meta property="og:site_name" content="Emilyty">
+<meta property="og:description" content="需要实现得需求：获取0时区（UTC）的时间；可以加减秒数；时间格式为 yyyy-MM-dd’T’HH：mm：ss.SSS 1234567import datetimenow &#x3D; datetime.datetime.utcnow()delta &#x3D; datetime.timedelta(seconds&#x3D;30) #加30秒n_seconds &#x3D; now + deltastart &#x3D; n_seconds.">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-17T09:28:14.000Z">
+<meta property="article:modified_time" content="2020-11-17T09:58:11.054Z">
+<meta property="article:author" content="Emilyty">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary">
+    
+        <link rel="alternate" type="application/atom+xml" title="Emilyty" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/back.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/header.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Emilyty</h5>
+          <a href="mailto:emilyty@163.com" title="emilyty@163.com" class="mail">emilyty@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/emilyty" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://blog.csdn.net/emilyty" target="_blank" >
+                <i class="icon icon-lg icon-CSDN"></i>
+                CSDN
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">python学习第一天</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">python学习第一天</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-11-17T09:28:14.000Z" itemprop="datePublished" class="page-time">
+  2020-11-17
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/">python</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+
+<article id="post-python学习第一天"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">python学习第一天</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-11-17 17:28:14" datetime="2020-11-17T09:28:14.000Z"  itemprop="datePublished">2020-11-17</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/python/">python</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>需要实现得需求：获取0时区（UTC）的时间；可以加减秒数；时间格式为 <code>yyyy-MM-dd’T’HH：mm：ss.SSS</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line">now = datetime.datetime.utcnow()</span><br><span class="line">delta = datetime.timedelta(seconds=<span class="number">30</span>) <span class="comment">#加30秒</span></span><br><span class="line">n_seconds = now + delta</span><br><span class="line">start = n_seconds.isoformat() <span class="comment">#把时间格式化</span></span><br><span class="line">startTime = <span class="built_in">str</span>(start)[:<span class="number">-3</span>]+<span class="string">&#x27;Z&#x27;</span> <span class="comment">#去掉最后的三个字符，加上Z</span></span><br><span class="line"><span class="built_in">print</span> (startTime) <span class="comment">#2020-11-17T09:23:38.278Z</span></span><br></pre></td></tr></table></figure>
+
+<p>从接口返回的数据中通过某一个字段找出其它字段的值，再该需求中知道name字段的值是多少，通过name字段找出其它key的value。name不重复。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">headers = &#123;<span class="string">&#x27;content-type&#x27;</span>: <span class="string">&#x27;application/json&#x27;</span>,<span class="string">&#x27;token&#x27;</span>:<span class="string">&#x27;test_token&#x27;</span>&#125;</span><br><span class="line">url = <span class="string">&#x27;http://test.com/test/index&#x27;</span></span><br><span class="line">rs = request.get(url,headers = headers)</span><br><span class="line">jsonTest = json.loads(rs.text)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">/例如，上面的接口返回的json结构为如下</span></span><br><span class="line"><span class="string">&#123;</span></span><br><span class="line"><span class="string">&#123;</span></span><br><span class="line"><span class="string">    &quot;total&quot;:10,</span></span><br><span class="line"><span class="string">    &quot;pageSize&quot;:100,</span></span><br><span class="line"><span class="string">    &quot;pageNum&quot;:1,</span></span><br><span class="line"><span class="string">    &quot;data&quot;:[</span></span><br><span class="line"><span class="string">        &#123;</span></span><br><span class="line"><span class="string">            &quot;id&quot;:&quot;10001&quot;,</span></span><br><span class="line"><span class="string">            &quot;name&quot;:&quot;我是测试数&quot;,</span></span><br><span class="line"><span class="string">            &quot;status&quot;:&quot;已发布&quot;,</span></span><br><span class="line"><span class="string">            &quot;objectName&quot;:&quot;我是测试数据-name&quot;,</span></span><br><span class="line"><span class="string">            &quot;objectFqn&quot;:&quot;test.data2&quot;</span></span><br><span class="line"><span class="string">        &#125;,</span></span><br><span class="line"><span class="string">        &#123;</span></span><br><span class="line"><span class="string">            &quot;id&quot;:&quot;10002&quot;,</span></span><br><span class="line"><span class="string">            &quot;name&quot;:&quot;newdata&quot;,</span></span><br><span class="line"><span class="string">            &quot;status&quot;:&quot;PUBLISHED&quot;,</span></span><br><span class="line"><span class="string">            &quot;objectName&quot;:&quot;新的数据&quot;,</span></span><br><span class="line"><span class="string">            &quot;objectFqn&quot;:&quot;test.data2&quot;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    ],</span></span><br><span class="line"><span class="string">    &quot;pages&quot;:2</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">test_data = jsonTest.get(<span class="string">&#x27;data&#x27;</span>) <span class="comment">#获取到data下的所有数据，list类型</span></span><br><span class="line">targetDate = [] <span class="comment">#这里也不一定用list，后面再看，总之先实现了功能</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> test_data:</span><br><span class="line">    name = i.get(<span class="string">&#x27;name&#x27;</span>) <span class="comment">#i是dict,可以通过key获取到value</span></span><br><span class="line">    <span class="keyword">if</span> name == <span class="string">&#x27;新的数据&#x27;</span>:</span><br><span class="line">        targetDate.append(i[<span class="string">&#x27;name&#x27;</span>]) <span class="comment">#把字典里value添加到list中</span></span><br><span class="line">        targetDate.append(i[<span class="string">&#x27;objectName&#x27;</span>])</span><br><span class="line">        targetDate.append(i[<span class="string">&#x27;objectFqn&#x27;</span>])</span><br><span class="line">        targetDate.append(i[<span class="string">&#x27;id&#x27;</span>])</span><br><span class="line"><span class="comment">#通过上面的数据生成新的json结构，通过上面的方式获取的原因是，接口里这些字段必传，但是又不能直接获取或者随便造。</span></span><br><span class="line"><span class="comment">#新的json结构如下，先这么写着，还没改造好。</span></span><br><span class="line">action = &#123;</span><br><span class="line">    <span class="string">&quot;id&quot;</span>:bianliang[<span class="number">3</span>],</span><br><span class="line">    <span class="string">&quot;name&quot;</span>:<span class="string">&quot;随便取一个&quot;</span>, </span><br><span class="line">    <span class="string">&quot;startTime&quot;</span>:startTime,</span><br><span class="line">    <span class="string">&quot;endTime&quot;</span>:endTime,</span><br><span class="line">    <span class="string">&quot;objectFqn&quot;</span>:bianliang[<span class="number">2</span>],</span><br><span class="line">    <span class="string">&quot;objectName&quot;</span>:bianliang[<span class="number">1</span>],</span><br><span class="line">    <span class="string">&quot;objectEntityName&quot;</span>:bianliang[<span class="number">0</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <footer>
+        <a href="https://emilyty.github.io">
+            <img src="/img/header.jpg" alt="Emilyty">
+            Emilyty
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://emilyty.github.io/2020/11/17/python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/&title=《python学习第一天》 — Emilyty&pic=https://emilyty.github.io/img/header.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://emilyty.github.io/2020/11/17/python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/&title=《python学习第一天》 — Emilyty&source=software testing" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://emilyty.github.io/2020/11/17/python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python学习第一天》 — Emilyty&url=https://emilyty.github.io/2020/11/17/python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/&via=https://emilyty.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://emilyty.github.io/2020/11/17/python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%BB%8E%E4%B8%9A%E8%80%85%EF%BC%8C%E9%9C%80%E6%8E%8C%E6%8F%A1%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">软件测试从业者，需掌握的数据库体系知识</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "9boq338fRwIVpDjInlL3jYE0-gzGzoHsz",
+            appKey: "OKTbIXukavfdcKw2c1MQyyfg",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        thanks
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Emilyty &copy; 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://emilyty.github.io/2020/11/17/python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/&title=《python学习第一天》 — Emilyty&pic=https://emilyty.github.io/img/header.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://emilyty.github.io/2020/11/17/python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/&title=《python学习第一天》 — Emilyty&source=software testing" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://emilyty.github.io/2020/11/17/python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python学习第一天》 — Emilyty&url=https://emilyty.github.io/2020/11/17/python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/&via=https://emilyty.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://emilyty.github.io/2020/11/17/python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADNElEQVR42u3aS27jQAwFwNz/0hlgVrOw5EdSA0hUaRU4hprVXhD8/PzEz+/f5+iT8/8m3z868d9n8rbmg42Njf0Q9u/pc23Q56ccveEohvz9H07BxsbGXsc+T1rniSS/iOrV9OJMTsfGxsZ+J7t3TJIak8LjqniwsbGx38zOWzz5k7x/3q7CxsbGfgN7kmZ6mLy1NE+W2NjY2LvZ1UHvnf/+j/NtbGxs7Fuye2VDPh5Ikta8tCgrsLGxsRexkzZNL+i8MZSv5uRrPVF6w8bGxl7Eriaba0uF829WS45yDNjY2NgPZycJoBpQb+2m18DqDTCwsbGxN7F7aSAPPS8zqkVF72pGMxBsbGzsW7LzNn01lLwIyQuVSb31ZSqCjY2N/XB2nn6qgF7rv5oyyyMKbGxs7HXs6qC3l2Z6baZ8bahwOjY2NvY6di/cXpdmktLyxdBo5xQbGxt7ETtPLb1kMwmxh/zSeMLGxsZex84bTHmbftJIql5WMkLGxsbG3s2ejAGqSSv/vLcMFP0A2NjY2IvYk7WbPLUkiapXnEzGw9jY2Nib2OXlxdZaZBVTTWlJ6sXGxsbex86Pn1xQ9SIm6zjRG7CxsbEXsRNGPiTIG/fVC5q0t76kMWxsbOyHs3slx6Qs6fHm1xF1trCxsbEfyL4KXL2C3lnV1Zwk3WJjY2NvYlfbTJNBbJ6QeqPl6vgZGxsb+7nsfLB62YpM8axCEqpORbCxsbEXsXsjgaQdXx2+9uJJEueHBIaNjY29gn3VBku1XKkOFeYj4UIOx8bGxn4UOykneu2kXtDV0qgac/lgbGxs7Nuz87FofmSvFJlfYrLi8+E3x8bGxn44e15C5EVLntJ6P0Nh3QcbGxt7HbtXlvQGrnmxkb+5/E1sbGzsdexJkyj5vDypGIyHo2SGjY2NvYidP3nZkJcukwWdq0bU2NjY2DvYvUZSb12mmhqTpNj7AbCxsbH3sa8a7s4XeqpD3POk+2VlBxsbG/tl7ElDZ7KIM4nh8A3Y2NjYL2bPW//XlkDNQQU2Njb2Ovak3TOBVdtD1YHuBb00bGxs7Nuzq4PePOjJWDdPbNWrwcbGxl7E/gNt/NSYHlMYyQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '每天积累一点点';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '测试经验分享';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

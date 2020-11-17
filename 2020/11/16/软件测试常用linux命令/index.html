@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>软件测试常用linux命令 | Emilyty | software testing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#2E3032">
+    
+    
+    <meta name="keywords" content="Linux">
+    <meta name="description" content="命令 cd  如何进入上级目录 1cd ..  如何进入当前用户主目录 cd ~  如何进入上两级目录 cd ..&#x2F;..  进入当前目录命令 cd .  如何进入目录 &#x2F;usr&#x2F;isTester cd &#x2F;usr&#x2F;isTester   命令 mv  移动一个文件夹（isTester文件夹，移动到&#x2F;APP&#x2F;www目录） mv ~&#x2F;isTester&#x2F; &#x2F;APP&#x2F;www  移动一个文件（isTester.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软件测试常用linux命令">
+<meta property="og:url" content="https://emilyty.github.io/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:site_name" content="Emilyty">
+<meta property="og:description" content="命令 cd  如何进入上级目录 1cd ..  如何进入当前用户主目录 cd ~  如何进入上两级目录 cd ..&#x2F;..  进入当前目录命令 cd .  如何进入目录 &#x2F;usr&#x2F;isTester cd &#x2F;usr&#x2F;isTester   命令 mv  移动一个文件夹（isTester文件夹，移动到&#x2F;APP&#x2F;www目录） mv ~&#x2F;isTester&#x2F; &#x2F;APP&#x2F;www  移动一个文件（isTester.">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-16T04:22:34.000Z">
+<meta property="article:modified_time" content="2020-11-16T05:42:44.613Z">
+<meta property="article:author" content="Emilyty">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary">
+    
+        <link rel="alternate" type="application/atom+xml" title="Emilyty" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/back.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/header.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Emilyty</h5>
+          <a href="mailto:emilyty@163.com" title="emilyty@163.com" class="mail">emilyty@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/emilyty" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://blog.csdn.net/emilyty" target="_blank" >
+                <i class="icon icon-lg icon-CSDN"></i>
+                CSDN
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">软件测试常用linux命令</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">软件测试常用linux命令</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-11-16T04:22:34.000Z" itemprop="datePublished" class="page-time">
+  2020-11-16
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+
+<article id="post-软件测试常用linux命令"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">软件测试常用linux命令</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-11-16 12:22:34" datetime="2020-11-16T04:22:34.000Z"  itemprop="datePublished">2020-11-16</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p><strong>命令 cd</strong></p>
+<ol>
+<li><p>如何进入上级目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ..</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如何进入当前用户主目录</p>
+<p>cd ~</p>
+</li>
+<li><p>如何进入上两级目录</p>
+<p>cd ../..</p>
+</li>
+<li><p>进入当前目录命令</p>
+<p>cd .</p>
+</li>
+<li><p>如何进入目录 /usr/isTester</p>
+<p>cd /usr/isTester</p>
+</li>
+</ol>
+<p><strong>命令 mv</strong></p>
+<ol>
+<li><p>移动一个文件夹（isTester文件夹，移动到/APP/www目录）</p>
+<p>mv ~/isTester/ /APP/www</p>
+</li>
+<li><p>移动一个文件（isTester.ini 移动到/APP/www目录）</p>
+<p>mv isTester.ini /APP/www</p>
+</li>
+<li><p>当前目录istester.tar.gz 移动到 /usr/ido 目录，并重命名为istester1228.tar.gz</p>
+<p>mv isTester.tar.gz /usr/ido/ido.tar.gz</p>
+</li>
+<li><p>移动文件到上级目录</p>
+<p>mv isTester.tar.gz ../</p>
+</li>
+<li><p>一条命令，移动两个文件 isTester.tar idoxu.tar 到目录 /APP/www</p>
+<p>mv isTester.tar idoxu.tar -t /APP/www</p>
+</li>
+</ol>
+<p><strong>命令 cp</strong></p>
+<ol>
+<li><p>复制当前目录部署包isTester.tar.gz 到备份目录/APP/www/bak 目录</p>
+<p>cp isTester.tar.gz /APP/www/bak</p>
+</li>
+<li><p>复制文件夹 isTester 到部署目录 /APP/www</p>
+<p>cp -r isTester/ /APP/www</p>
+</li>
+</ol>
+<p><strong>命令 mkdir</strong></p>
+<p>在目录/APP/www 下，</p>
+<p>cd /APP/www </p>
+<ol>
+<li><p>新建一个文件夹 isTester</p>
+<p>mkdir isTester</p>
+</li>
+<li><p>新建三个文件夹 isTester1 isTester2 isTester3</p>
+<p>mkdir isTester1 isTester2 isTester3</p>
+</li>
+<li><p>新建一个多层级文件夹 idoxu/20181230/01</p>
+<p>mkdir -p idoxu/20181230/01</p>
+</li>
+</ol>
+<p><strong>命令 history</strong> </p>
+<ol>
+<li><p>查看历史命令执行记录 </p>
+<p>history </p>
+</li>
+<li><p>查看命令mkdir 的历史执行记录 </p>
+<p>history | grep mkdir </p>
+</li>
+<li><p>执行历史记录中，序号为178的命令 </p>
+<p>!178</p>
+</li>
+</ol>
+<p><strong>命令 tail</strong></p>
+<ol>
+<li><p>实时刷新log</p>
+<p>tail -f isTester.log</p>
+</li>
+<li><p>实时刷新最新500条log</p>
+<p>tail -500f isTester.log</p>
+</li>
+</ol>
+<p><strong>命令 tar</strong></p>
+<ol>
+<li><p>压缩一个文件 isTester.ini </p>
+<p>tar -cvf isTester.tar isTester.ini </p>
+</li>
+<li><p>压缩多个文件 isTester.ini readme.ini</p>
+<p>tar -cvf all.tar isTester.ini readme.ini</p>
+</li>
+<li><p>压缩文件夹 isTester/</p>
+<p>tar -cvf isTester.tar isTester/</p>
+</li>
+<li><p>将当前目录，所有jpg文件打包成isTesterjpg.tar</p>
+<p>tar -cvf isTesterjpg.tar *.jpg</p>
+</li>
+<li><p>将当前目录，所有jpg文件打包成isTesterjpg.tar.gz</p>
+<p>tar -zcvf isTesterjpg.tar.gz *.jpg</p>
+</li>
+<li><p>解压 isTesterjpg.tar</p>
+<p>tar -xvf isTesterjpg.tar</p>
+</li>
+<li><p>解压 isTesterjpg.tar.gz</p>
+<p>tar -zxvf isTesterjpg.tar.gz</p>
+</li>
+</ol>
+<p><strong>命令 ls</strong></p>
+<ol>
+<li><p>列出当前目录中所有的子目录和文件。</p>
+<p>ls</p>
+</li>
+<li><p>列出目录下的所有文件（包含隐**件）</p>
+<p>ls -a</p>
+</li>
+<li><p>列出文件的详细信息（包括权限、所有者、文件大小等）</p>
+<p>ls -l</p>
+</li>
+<li><p>列出当前目录中所有以“isTester”开头的详细内容</p>
+<p>ls -l isTester*</p>
+</li>
+</ol>
+<p><strong>命令 ps</strong></p>
+<ol>
+<li><p>查看所有进程</p>
+<p>ps -A</p>
+</li>
+<li><p>查看java进程</p>
+<p>ps -ef|grep java</p>
+</li>
+<li><p>显示所有进程信息，连同命令行</p>
+<p>ps -ef</p>
+</li>
+</ol>
+<p><strong>命令 top</strong></p>
+<ol>
+<li><p>显示进程信息</p>
+<p>top</p>
+</li>
+<li><p>监控每个逻辑CPU的状况</p>
+<p>top ，按 1</p>
+</li>
+<li><p>高亮显示当前运行进程</p>
+<p>top ，按 b</p>
+</li>
+<li><p>显示 完整命令</p>
+<p>top ，按 c</p>
+</li>
+<li><p>退出top程序</p>
+<p>按 q</p>
+</li>
+</ol>
+<p><strong>命令wget</strong></p>
+<p>Linux系统中的wget是一个下载文件的工具，对于Linux用户是必不可少的工具</p>
+<p>文件地址</p>
+<p><a target="_blank" rel="noopener" href="http://51.istester.com/isTester.png">http://51.istester.com/isTester.png</a></p>
+<ol>
+<li><p>下载isTester.jpg文件</p>
+<p>wget <a target="_blank" rel="noopener" href="http://51.istester.com/isTester.png">http://51.istester.com/isTester.png</a></p>
+</li>
+<li><p>下载isTester.jpg文件，并存储名为isTester_Logo.jpg</p>
+<p>wget -o isTester_Logo.jpg </p>
+<p><a target="_blank" rel="noopener" href="http://51.istester.com/isTester.png">http://51.istester.com/isTester.png</a></p>
+</li>
+<li><p>下载isTester.jpg文件，后台形式下载</p>
+<p>wget -b <a target="_blank" rel="noopener" href="http://51.istester.com/isTester.png">http://51.istester.com/isTester.png</a></p>
+</li>
+</ol>
+<p><strong>命令 find</strong></p>
+<p>​    find命令，非常强大，也非常实用，分两次完成，今日第一次 。</p>
+<p>​    给大家布置的作业，是比较实用的几个场景 。</p>
+<ol>
+<li><p>在/root/isTester 目录及其子目录下面查找名字为isTester.ini的文件 </p>
+<p>find /root/isTester/ -name isTester.ini</p>
+</li>
+<li><p>在当前目录及其子目录中查找任何扩展名为“ini”的文件</p>
+<p>find . -name “*.ini”</p>
+</li>
+<li><p>在/root/isTester目录下查找更改时间在5日以内的文件 </p>
+</li>
+</ol>
+<p>​    find /root/isTester/ -mtime +5</p>
+<ol start="4">
+<li><p>在/root/isTester目录下查找更改时间在3日以前的文件</p>
+<p>find /root/isTester/ -mtime -3</p>
+</li>
+<li><p>在/root/isTester目录下查找所有的目录</p>
+<p>find . -type d</p>
+</li>
+<li><p>在/root/isTester目录下查找所有的文件</p>
+<p>find /root/isTester/ -type f</p>
+</li>
+</ol>
+<p><strong>命令 继续find（进阶）</strong></p>
+<p>find命令，非常强大，也非常实用，分两次完成，今日第一次 。</p>
+<p>给大家布置的作业，是比较实用的几个场景 。</p>
+<ol>
+<li><p>在当前目录，所有的普通文件中搜索istester这个词</p>
+<p>find ./ -type f |xargs grep “istester”</p>
+</li>
+<li><p>在当前目录，删除1天以内的所有东西 </p>
+<p>find ./ -mtime -1 -print | xargs rm -rf</p>
+</li>
+<li><p>在当前目录，删除10天以前的所有东西（实操的时候，需谨慎，确保在自己建的目录内，别把系统目录删了…）</p>
+<p>find ./ -mtime +10 -print | xargs rm -rf</p>
+</li>
+<li><p>删除文件大小为零的文件</p>
+<p>find ./ -size 0 | xargs rm -rf</p>
+</li>
+</ol>
+<p><strong>命令 rm</strong></p>
+<p>rm是常用的命令，该命令的功能为删除目录/文件（可同时删除，多个文件 / 多个目录）</p>
+<p>当然，这也是一个非常危险的命令，建议少用（比如经常出现的误操作 rm * -rf 此命令慎用）</p>
+<ol>
+<li><p>删除/root/isTester/目录下的文件isTester.ini （系统会询问是否删除）</p>
+<p>rm /root/isTester/isTester.ini</p>
+</li>
+<li><p>强行删除/root/isTester/目录下的文件isTester.ini（直接删除，系统不会提示）</p>
+</li>
+</ol>
+<p>​    rm -f /root/isTester/isTester.ini</p>
+<ol start="3">
+<li>删除/root/isTester/目录下的所有.log文件</li>
+</ol>
+<p>​    rm -f /root/isTester/*.log</p>
+<ol start="4">
+<li>删除/root/isTester/目录下的 ido/文件夹</li>
+</ol>
+<p>​    rm -r /root/isTester/ido/</p>
+<ol start="5">
+<li>强行删除/root/isTester/目录下的 ido/文件夹</li>
+</ol>
+<p>​    rm -rf /root/isTester/ido/</p>
+<ol start="6">
+<li>删除/root/isTester/目录下的所有内容</li>
+</ol>
+<p>​    rm -rf /root/isTester/*</p>
+<p><strong>文件操作系列 命令</strong></p>
+<ol>
+<li><p>创建文件，你知道有哪几个命令 ？（写出至少两种方式）  </p>
+<ol>
+<li><p>touch isTester.ini  </p>
+</li>
+<li><p>vi isTester.md</p>
+</li>
+<li><p>echo ‘only test’ &gt; <a target="_blank" rel="noopener" href="http://istester.com/">isTester.com</a></p>
+</li>
+<li><p>cp isTester.ini isTester666.ini</p>
+</li>
+<li><p>ls &gt; fileList.txt</p>
+</li>
+</ol>
+</li>
+</ol>
+<ol start="2">
+<li><p>同时创建文件 isTester6.ini idoxu.ini</p>
+<p>touch isTester6.ini idoxu.ini</p>
+</li>
+<li><p>同时创建2000个文件 isTester0001.ini - isTester2000.ini</p>
+<p>touch istester{0001..2000}.ini</p>
+</li>
+<li><p>更改文件 isTester.ini时间为当前时间</p>
+<p>touch isTester.ini</p>
+</li>
+</ol>
+<p><strong>查看文件系列 命令</strong></p>
+<p>命令提示</p>
+<p>#cat 由第一行开始显示档案内容 </p>
+<p>#tac 从最后一行开始显示，可以看出 tac 是 cat 的倒着写！ </p>
+<p>#more 一页一页的显示档案内容 </p>
+<p>#less 与 more 类似，但是比 more 更好的是，他可以往前翻页！ </p>
+<p>#head 只看头几行 </p>
+<p>#tail 只看尾巴几行 </p>
+<p>#nl  显示的时候，顺道输出 行号！ </p>
+<ol>
+<li>查看文件 isTester.ini的内容</li>
+</ol>
+<p>​    cat isTester.ini</p>
+<ol start="2">
+<li>看文件 isTester.ini前20行内容</li>
+</ol>
+<p>​    head -n 20 isTester.ini</p>
+<ol start="3">
+<li>看文件 isTester.ini最后30行内容</li>
+</ol>
+<p>​    tail -n 30 isTester.ini</p>
+<ol start="4">
+<li>显示文件isTester.ini 的第10至20行的内容</li>
+</ol>
+<p>​    head -n 20 isTester.ini | tail -n 10</p>
+<ol start="5">
+<li>倒序显示文件isTester.ini 前10行的内容</li>
+</ol>
+<p>​    tac isTester.ini | head -n 10</p>
+<ol start="6">
+<li>显示文件isTester.ini 前10行的内容，并显示行号</li>
+</ol>
+<p>​    nl isTester.ini | head -n 10</p>
+<p><strong>命令 yum &amp; scp</strong></p>
+<p><strong># 假设 当前服务器ip  192.168.1.23</strong></p>
+<ol>
+<li><p>从Linux服务器192.168.1.22 拷贝文件isTester.ini 到服务器192.168.1.23</p>
+<p>scp <a href="mailto:&#x72;&#111;&#x6f;&#116;&#x40;&#49;&#x39;&#50;&#46;&#49;&#54;&#x38;&#x2e;&#49;&#x2e;&#50;&#50;">&#x72;&#111;&#x6f;&#116;&#x40;&#49;&#x39;&#50;&#46;&#49;&#54;&#x38;&#x2e;&#49;&#x2e;&#50;&#50;</a>:/root/idoxu/isTester.ini /root/idoxu </p>
+</li>
+<li><p>从Linux服务器192.168.1.22 拷贝目录 isTester/ 到服务器192.168.1.23</p>
+<p>scp -r <a href="mailto:&#x72;&#x6f;&#x6f;&#116;&#64;&#49;&#x39;&#x32;&#x2e;&#49;&#54;&#x38;&#x2e;&#49;&#46;&#50;&#50;">&#x72;&#x6f;&#x6f;&#116;&#64;&#49;&#x39;&#x32;&#x2e;&#49;&#54;&#x38;&#x2e;&#49;&#46;&#50;&#50;</a>:/root/idoxu/isTester/ /root/idoxu</p>
+</li>
+<li><p>Linux下安装scp命令（假设是centos服务器，命令用yum）</p>
+<p>yum install openssh-clients </p>
+</li>
+</ol>
+<p><strong>命令</strong></p>
+<p><strong>clear</strong></p>
+<p><strong>df</strong></p>
+<p><strong>du</strong></p>
+<p><strong>ifconfig</strong></p>
+<ol>
+<li><p>查看当前服务器ip</p>
+<p>ifconfig</p>
+</li>
+<li><p>查看当前服务器硬盘空间</p>
+<p>df -h</p>
+</li>
+<li><p>查看目录isTester/ 所占有的空间</p>
+<p>du -sh isTester</p>
+</li>
+<li><p>清空当前终端屏幕</p>
+<p>clear</p>
+</li>
+</ol>
+<p><strong>命令 vi + chmod</strong></p>
+<p>/** </p>
+<p>vi 创建文件 + 编辑文件 。</p>
+<p>chmod命令用于改变linux系统文件或目录的访问权限 。</p>
+<p>**/</p>
+<ol>
+<li><p>创建文件 isTester.ini</p>
+<p>vi isTester.ini</p>
+</li>
+<li><p>更新文件内容为“21 day Linux Learn ,I’m Idolaoxu,in shenzhen .</p>
+</li>
+</ol>
+<p>”</p>
+<p>输入 i ，进入编辑模式，输入内容，esc进入命令模式 :wq 保存 。</p>
+<ol start="2">
+<li><p>将文件 isTester.ini 设为所有人皆可读取</p>
+<p>chmod +r isTester.ini</p>
+</li>
+<li><p>将 isTester.ini 设定为只有该文件拥有者可以执行</p>
+<p>chmod u+x isTester.ini</p>
+</li>
+<li><p>给文件 isTester.ini 设置所有权限</p>
+<p>chmod 777 isTester.ini (或者 chmod a=rwx isTester.ini)</p>
+</li>
+</ol>
+<p>注：chmod还有很多命令用法，如上几种，满足日常需求 。</p>
+<p>比如，想了解 top命令咋用 ？</p>
+<p>终端输入 top –help 即可 </p>
+<p><strong>最后，关于Linux学习的几个建议 。</strong></p>
+<ol>
+<li><p>每个命令，多敲几次，每天掌握此文的一个命令即可，勿贪多 。</p>
+</li>
+<li><p>掌握了前面的一个命令，再继续下一个命令。否则，欠的技术债会越来越多，最后放弃学习 。</p>
+</li>
+<li><p>学Linux，没诀窍，多敲命令 。</p>
+</li>
+<li><p>此文的命令，一个循环，预计你需要21天完成 。总共三个循环 ，2个月，大功告成 。</p>
+</li>
+</ol>
+<p><strong>所谓的三循环理论：</strong></p>
+<p>第一遍，花21天时间，把每个命令，敲一遍 。</p>
+<p>第二遍，花21天时间，把每个命令，再熟悉一遍 。</p>
+<p>第三遍，花21天时间，巩固，延伸更多命令组合玩法，熟记于心 。</p>
+<p><strong>如果你能看到这段文字，且是第三遍以上看到，恭喜你，Linux这块的知识点，差不多了 。</strong></p>
+<p><strong>你，可以开始下一个环节 Jenkins / 接口自动化  / 数据库 / 性能测试  /  测试管理  等等 的 专项学习 。</strong></p>
+<p><strong>事情很多，别急，慢慢来 。</strong></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <footer>
+        <a href="https://emilyty.github.io">
+            <img src="/img/header.jpg" alt="Emilyty">
+            Emilyty
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://emilyty.github.io/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/&title=《软件测试常用linux命令》 — Emilyty&pic=https://emilyty.github.io/img/header.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://emilyty.github.io/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/&title=《软件测试常用linux命令》 — Emilyty&source=software testing" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://emilyty.github.io/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《软件测试常用linux命令》 — Emilyty&url=https://emilyty.github.io/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/&via=https://emilyty.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://emilyty.github.io/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2020/11/16/mysql%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B8%8A/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">mysql常用语法学习上</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/11/15/github-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">github+hexo搭建博客遇到的坑</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "9boq338fRwIVpDjInlL3jYE0-gzGzoHsz",
+            appKey: "OKTbIXukavfdcKw2c1MQyyfg",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        thanks
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Emilyty &copy; 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://emilyty.github.io/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/&title=《软件测试常用linux命令》 — Emilyty&pic=https://emilyty.github.io/img/header.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://emilyty.github.io/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/&title=《软件测试常用linux命令》 — Emilyty&source=software testing" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://emilyty.github.io/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《软件测试常用linux命令》 — Emilyty&url=https://emilyty.github.io/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/&via=https://emilyty.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://emilyty.github.io/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAAD5UlEQVR42u3awW7CQAwEUP7/p+m1UhuYsTe0h5cTQijZfTkMa/vxiK/nt+v7Nz9/8/P3V79MrnY9r1d47MKBAwcOHPFWrxaULDRZ4myhV5tMVpvvEQcOHDhwnOXIF9Euq73z6/snsTpbCQ4cOHDg+CuOZPP5YSyPxv0Lw4EDBw4c/5nj9dEo2XBbo2vviQMHDhw4/pYjKQ62oTgL47yQlzeubqmV4sCBAweOLumGofs/P98y34EDBw4cOIJjUhtIs9/PmlWndnG5Whw4cODAsebIH98W6Tbhd+rwNtwXDhw4cOBYcOSlwGRooIVLNvz6nm1B8M0rwYEDBw4ca459+OVxmG+g3fBsxOHyexw4cODAsebIwyy56d3lxXbwLh/FwIEDBw4cZznyrSYNpPZwmLySdsxiBYEDBw4cONYc7eLy4l0bz20hsj0uRnGOAwcOHDiOcmyCbRPJZ8cjkhbUm+IgDhw4cOAoOdoo2h/w2qNXvplZzOPAgQMHjvs4Zq2mWarn29u0rNoIx4EDBw4ce46zkdnGXg4xi9LZnwYcOHDgwLHnyEuBkeiosbQvJuaNsTfQOHDgwIFjwdG2iDalvdlC85G+dlVRcRAHDhw4cIw4ZlHaQhTnyDJuZ38CfuHDgQMHDhyHOJImTV4E3LSXkjCelSnryigOHDhw4BhxtEW6zYBa2zSatY42xUccOHDgwPEZjrw4mI8m7IM8X9vhoMWBAwcOHIsj3AwxbxTNxiAOHNKu1oMDBw4cOI5y7I9MbVkw+ablyKP3l+fiwIEDB45DHG1wtrH6HF3Jc/OxvOjOOHDgwIFjzZG3kZIgzB/ZlgXPbrsuFOLAgQMHjpijLQVultgGcHKfPLAjPhw4cODAsebIN7Yv/O1HEGaU+evBgQMHDhynOPbjBZty3uYFJC2lW1Bw4MCBA0fJkZTb8rpjG5AtcfvaXpPhwIEDB44NR7vJxLVt/OSf2xJh22DDgQMHDhxnOWZHnbydk1O2h7okYqMjJQ4cOHDgOMTRbj6JsU3Lqo3wtlx4eU8cOHDgwHGI41SJsA3m/WFyVl68fDoOHDhw4FhznAqwduwgH55IEPOyYPSHAAcOHDhwLDie5dVGbBuWsxCdHQiL4iAOHDhw4Og6L488lmZtoU2TKSHLW2I5JQ4cOHDg2HAk4ZqU3trAzre6PwomYY8DBw4cOM5yzEYTco52G/tD5hALBw4cOHB8nCM/bs3OkW3Yt89982Jw4MCBA8fHOTYbaCN8VpRcjVngwIEDB45DHKcGFKIC3AjljnG6Va0UBw4cOHCsBxraMbWce9M0yu9QH+dw4MCBA0fH8QUL5gL0cajoAgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '每天积累一点点';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '测试经验分享';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

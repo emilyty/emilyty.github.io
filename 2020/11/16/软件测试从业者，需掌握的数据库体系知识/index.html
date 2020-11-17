@@ -14,28 +14,25 @@
     
     
     
-    <title>github+hexo搭建博客遇到的坑 | Emilyty | software testing</title>
+    <title>软件测试从业者，需掌握的数据库体系知识 | Emilyty | software testing</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#2E3032">
     
     
-    <meta name="keywords" content="搭建GitHub博客">
-    <meta name="description" content="搭建GitHub博客教程：https:&#x2F;&#x2F;www.cnblogs.com&#x2F;liuxianan&#x2F;p&#x2F;build-blog-website-by-hexo-github.html 为了防止失效，先截个图保存一下   1、hexo init一直卡住无法继续 12$ hexo initINFO  Cloning hexo-starter https:&#x2F;&#x2F;github.com&#x2F;">
+    <meta name="keywords" content="mysql">
+    <meta name="description" content="从知识体系的角度，数据库、Linux、测试理论、软件工程知识、计算机基础、网络基础、服务器 基础、程序语言基础（Java &#x2F; Python）等，都是软件测试从业者必须具备的基础知识。 如上，各方面，之前有文章专题聊过。响应各从业者需求，聊聊数据库这块 。 老徐一直认为数据库没啥好讲的，就那么点东西，自己折腾下就会了。然而，从实际的了解来看，很多从业者对数据库是有强需求，有些甚至工作中都没接触过数据">
 <meta property="og:type" content="article">
-<meta property="og:title" content="github+hexo搭建博客遇到的坑">
-<meta property="og:url" content="https://emilyty.github.io/2020/11/15/github-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/index.html">
+<meta property="og:title" content="软件测试从业者，需掌握的数据库体系知识">
+<meta property="og:url" content="https://emilyty.github.io/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%BB%8E%E4%B8%9A%E8%80%85%EF%BC%8C%E9%9C%80%E6%8E%8C%E6%8F%A1%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86/index.html">
 <meta property="og:site_name" content="Emilyty">
-<meta property="og:description" content="搭建GitHub博客教程：https:&#x2F;&#x2F;www.cnblogs.com&#x2F;liuxianan&#x2F;p&#x2F;build-blog-website-by-hexo-github.html 为了防止失效，先截个图保存一下   1、hexo init一直卡住无法继续 12$ hexo initINFO  Cloning hexo-starter https:&#x2F;&#x2F;github.com&#x2F;">
+<meta property="og:description" content="从知识体系的角度，数据库、Linux、测试理论、软件工程知识、计算机基础、网络基础、服务器 基础、程序语言基础（Java &#x2F; Python）等，都是软件测试从业者必须具备的基础知识。 如上，各方面，之前有文章专题聊过。响应各从业者需求，聊聊数据库这块 。 老徐一直认为数据库没啥好讲的，就那么点东西，自己折腾下就会了。然而，从实际的了解来看，很多从业者对数据库是有强需求，有些甚至工作中都没接触过数据">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://emilyty.github.io/2020/11/15/github-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/github+hexo搭建博客教程.png">
-<meta property="og:image" content="https://emilyty.github.io/2020/11/15/github-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/image-20201115113744828.png">
-<meta property="article:published_time" content="2020-11-15T03:24:30.000Z">
-<meta property="article:modified_time" content="2020-11-15T03:39:08.605Z">
+<meta property="article:published_time" content="2020-11-16T05:43:18.000Z">
+<meta property="article:modified_time" content="2020-11-16T08:42:40.614Z">
 <meta property="article:author" content="Emilyty">
-<meta property="article:tag" content="搭建GitHub博客">
+<meta property="article:tag" content="mysql">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://emilyty.github.io/2020/11/15/github-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/github+hexo搭建博客教程.png">
     
         <link rel="alternate" type="application/atom+xml" title="Emilyty" href="/atom.xml">
     
@@ -123,7 +120,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">github+hexo搭建博客遇到的坑</div>
+        <div class="flex-col header-title ellipsis">软件测试从业者，需掌握的数据库体系知识</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -145,15 +142,13 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">github+hexo搭建博客遇到的坑</h1>
+        <h1 class="title">软件测试从业者，需掌握的数据库体系知识</h1>
         <h5 class="subtitle">
             
-                <time datetime="2020-11-15T03:24:30.000Z" itemprop="datePublished" class="page-time">
-  2020-11-15
+                <time datetime="2020-11-16T05:43:18.000Z" itemprop="datePublished" class="page-time">
+  2020-11-16
 </time>
 
-
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li></ul>
 
             
         </h5>
@@ -168,17 +163,15 @@
 <div class="container body-wrap">
     
 
-<article id="post-github-hexo搭建博客遇到的坑"
+<article id="post-软件测试从业者，需掌握的数据库体系知识"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">github+hexo搭建博客遇到的坑</h1>
+        <h1 class="post-card-title">软件测试从业者，需掌握的数据库体系知识</h1>
         <div class="post-meta">
-            <time class="post-time" title="2020-11-15 11:24:30" datetime="2020-11-15T03:24:30.000Z"  itemprop="datePublished">2020-11-15</time>
+            <time class="post-time" title="2020-11-16 13:43:18" datetime="2020-11-16T05:43:18.000Z"  itemprop="datePublished">2020-11-16</time>
 
             
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li></ul>
-
 
 
             
@@ -189,19 +182,18 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>搭建GitHub博客教程：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html">https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html</a></p>
-<p>为了防止失效，先截个图保存一下</p>
-<img src="github+hexo搭建博客教程.png" alt="github+hexo搭建博客教程" style="zoom:1%;" />
+            <p>从<a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzAxMTM2NzQ5MA==&mid=2651070947&idx=1&sn=51e326c4a2f7e96ce66421e145861fc8&chksm=80b2a4ceb7c52dd848385055a2a6babea7603d903a69a2eaa103d4e5edad072ebd2987a9ea50&scene=21#wechat_redirect">知识体系</a>的角度，数据库、Linux、测试理论、软件工程知识、计算机基础、网络基础、<a target="_blank" rel="noopener" href="http://istester.com/linux/227.html">服务器</a> 基础、程序语言基础（Java / Python）等，都是软件测试从业者必须具备的基础知识。</p>
+<p>如上，各方面，之前有文章专题聊过。<br>响应各从业者需求，<strong>聊聊数据库这块</strong> 。</p>
+<p>老徐一直认为数据库没啥好讲的，就那么点东西，自己折腾下就会了。<br>然而，从实际的了解来看，很多从业者对数据库是有强需求，有些甚至工作中都没接触过数据库，导致第一次接触时，完全没概念 。<br>**<br>**</p>
+<p>**<br>**</p>
+<p><strong>软件测试从业者，需要掌握的数据库知识体系可以分为三个阶段 。</strong><br>**<br>**</p>
+<p><strong>第一阶段（多数测试从业者足够）</strong><br>\1. 至少得知道常见的数据库类型Mysql 、MSSQL 、 Oracle 、 Memcached 、 Redis 、 Mongodb 等<br>注：如下以MYSQL为例 。<br>\2. 数据库的安装、部署 ，基础使用 。你至少得会自己在服务器 或 自己电脑上安装个数据库。 3. 常见的数据库链接工具。<br>如 WorkBench  Navicat  phpMyAdmin 等 。<br>\4. 数据库基础配置 。修改密码、添加用户等。<br>\5. 创建/删除库、创建/删除表、查看库、查看表。<br>\6. 基本的增删改查 语句。</p>
+<p><strong>第二阶段（一些对数据有强需求的业务测试）</strong><br>\7. 备份、还原数据库 。<br>\8. 稍微复杂点的SQL 多表查询、子查询 等等。<br>\9. 存储过程 、视图 等。<br>10.数据导入、导出数据 等。<br>11.造数据。实际测试过程中，经常需要通过数据库造一些测试数据。</p>
+<p><strong>第三阶段（数据库的一些优化知识、安全知识 等 ，多数测试同学可以不掌握）**</strong><br>**如：慢SQL 、SQL优化、使用规范等 。主要是方便：定位问题、性能优化 等。</p>
+<p>End<br>补充：<strong>具体的常用SQL语句，大家是否有需求否？</strong>如有，老徐可以简单列一些高频的 。**</p>
+<hr>
+<p><strong><strong>最后，</strong></strong>送上一本数据库相关的电子书，后台回复「MySQL」直接下载 。**</p>
 
-<p><strong>1、hexo init一直卡住无法继续</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br><span class="line">INFO  Cloning hexo-starter https:&#x2F;&#x2F;github.com&#x2F;hexojs&#x2F;hexo-starter.git </span><br></pre></td></tr></table></figure>
-
-<p>出现这个问题的主要原因是安装源，可以重置安装源为taobao</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<p>2、本地博客hexo d提交到GitHub后通过username.github.io访问页面空白</p>
-<p>GitHub页面默认读的是main分支，所以把分支改为master分支就可。入口为仓库的settings。</p>
-<img src="image-20201115113744828.png" alt="image-20201115113744828" style="zoom:33%;" />
         </div>
 
         <blockquote class="post-copyright">
@@ -223,7 +215,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%90%AD%E5%BB%BAGitHub%E5%8D%9A%E5%AE%A2/" rel="tag">搭建GitHub博客</a></li></ul>
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li></ul>
 
 
             
@@ -233,7 +225,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://emilyty.github.io/2020/11/15/github-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/&title=《github+hexo搭建博客遇到的坑》 — Emilyty&pic=https://emilyty.github.io/img/header.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://emilyty.github.io/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%BB%8E%E4%B8%9A%E8%80%85%EF%BC%8C%E9%9C%80%E6%8E%8C%E6%8F%A1%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86/&title=《软件测试从业者，需掌握的数据库体系知识》 — Emilyty&pic=https://emilyty.github.io/img/header.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -243,22 +235,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://emilyty.github.io/2020/11/15/github-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/&title=《github+hexo搭建博客遇到的坑》 — Emilyty&source=software testing" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://emilyty.github.io/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%BB%8E%E4%B8%9A%E8%80%85%EF%BC%8C%E9%9C%80%E6%8E%8C%E6%8F%A1%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86/&title=《软件测试从业者，需掌握的数据库体系知识》 — Emilyty&source=software testing" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://emilyty.github.io/2020/11/15/github-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://emilyty.github.io/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%BB%8E%E4%B8%9A%E8%80%85%EF%BC%8C%E9%9C%80%E6%8E%8C%E6%8F%A1%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《github+hexo搭建博客遇到的坑》 — Emilyty&url=https://emilyty.github.io/2020/11/15/github-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/&via=https://emilyty.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《软件测试从业者，需掌握的数据库体系知识》 — Emilyty&url=https://emilyty.github.io/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%BB%8E%E4%B8%9A%E8%80%85%EF%BC%8C%E9%9C%80%E6%8E%8C%E6%8F%A1%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86/&via=https://emilyty.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://emilyty.github.io/2020/11/15/github-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://emilyty.github.io/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%BB%8E%E4%B8%9A%E8%80%85%EF%BC%8C%E9%9C%80%E6%8E%8C%E6%8F%A1%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -281,18 +273,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/" id="post-prev" class="post-nav-link">
+      <a href="/2020/11/17/python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">软件测试常用linux命令</h4>
+        <h4 class="title">python学习第一天</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2020/11/15/hexo%E6%96%87%E7%AB%A0%E7%94%A8Typora%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E6%96%B9%E6%B3%95/" id="post-next" class="post-nav-link">
+      <a href="/2020/11/16/mysql%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B8%8B/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">hexo文章用Typora插入图片方法</h4>
+        <h4 class="title">mysql常用语法学习下</h4>
       </a>
     </div>
   
@@ -416,7 +408,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://emilyty.github.io/2020/11/15/github-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/&title=《github+hexo搭建博客遇到的坑》 — Emilyty&pic=https://emilyty.github.io/img/header.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://emilyty.github.io/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%BB%8E%E4%B8%9A%E8%80%85%EF%BC%8C%E9%9C%80%E6%8E%8C%E6%8F%A1%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86/&title=《软件测试从业者，需掌握的数据库体系知识》 — Emilyty&pic=https://emilyty.github.io/img/header.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -426,22 +418,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://emilyty.github.io/2020/11/15/github-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/&title=《github+hexo搭建博客遇到的坑》 — Emilyty&source=software testing" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://emilyty.github.io/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%BB%8E%E4%B8%9A%E8%80%85%EF%BC%8C%E9%9C%80%E6%8E%8C%E6%8F%A1%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86/&title=《软件测试从业者，需掌握的数据库体系知识》 — Emilyty&source=software testing" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://emilyty.github.io/2020/11/15/github-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://emilyty.github.io/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%BB%8E%E4%B8%9A%E8%80%85%EF%BC%8C%E9%9C%80%E6%8E%8C%E6%8F%A1%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《github+hexo搭建博客遇到的坑》 — Emilyty&url=https://emilyty.github.io/2020/11/15/github-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/&via=https://emilyty.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《软件测试从业者，需掌握的数据库体系知识》 — Emilyty&url=https://emilyty.github.io/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%BB%8E%E4%B8%9A%E8%80%85%EF%BC%8C%E9%9C%80%E6%8E%8C%E6%8F%A1%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86/&via=https://emilyty.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://emilyty.github.io/2020/11/15/github-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://emilyty.github.io/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%BB%8E%E4%B8%9A%E8%80%85%EF%BC%8C%E9%9C%80%E6%8E%8C%E6%8F%A1%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%93%E7%B3%BB%E7%9F%A5%E8%AF%86/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -452,7 +444,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAAD6ElEQVR42u3aS04kMRAFQO5/aWbLCFX7vUw3AilqhYYutx1GysnPx0f8fH552n/5/tvZ87Sfp09+f+vagwMHDhw44qO+Xjr/+vYw33+bE+dvJdA4cODAgeMWx1PEyY/6+AVBLJuF9hni4ew4cODAgePXcDyt9hqoDdv5gXHgwIEDx1/hSBYtUqarwRgHDhw4cPwejlnhLw+xScEub1Dd/SQOHDhw4LjLkYe9v/vzW+Y7cODAgQNHORWWj6BtWkGzEbdbAfu/t3DgwIEDx5qj/frZiNvsqMl33R2twIEDBw4ce45ZWTBv7WyKdHnTKA+0hyvBgQMHDhyXONqmUfuVbfsqH6Rry3+HVBMHDhw4cKw52sPnQ2xtOJyN3+UDc/WV4MCBAweOBce7tzhL7WZtrQthHgcOHDhwLDj2DZ489LYDE7Pi4Kb0iQMHDhw49hybYlwSPmcFuzwAb8bpopVx4MCBA8eIYxb2ktQoT97aw+STgHlCiAMHDhw49hxtGS4n2AwxtGlhO1rx+BkcOHDgwLHmmLX82xbRjOl9RclD2okDBw4cOC5x5EfKRwp+nqYIqE/nxYEDBw4cC468eNdWHPPfttBts+rC3wUOHDhw4Ig5ZkMDLVk7iLBpX+X7jzJaHDhw4MBRcuTDAbPRhFmRMUnY2kuKrgQHDhw4cKw5kiC0LyDmWLNBis1ZDlg4cODAgaPk2IwCtJueDUa0e7vw/w4cOHDgwPE2jjzxy0PareLgPkk7NJxw4MCBA8eCY1bO27ej8oQwH7x7/dahoIkDBw4cON7Akbdwko1uVt6kne3Kh4EGHDhw4MARc+QLbRpOs7LdpuHUUuLAgQMHjrsc+dBbm+C1o3LtOMVmtcfLwIEDBw4cC4725VlJsW1NbaDzFYpOFw4cOHDgmM8qFGGsTeraNC+5vFsXWfzV4MCBAweOEUcejDeJ0yas3h2kwIEDBw4ctzhymzZwtivfDattA2y4aRw4cODA8ZJjnyAlx9ukavtxhyLQ4sCBAweOqxxtc2hzgPytWXkxeRcHDhw4cNzl2JQFZwXEW62sdoTi8EkcOHDgwLHm2Cdjm3JeXjScNb3a9XHgwIEDx57js3za8JkfctNAytO/w9XiwIEDB441R/7MRgpeh9i8ELkZoWvXxIEDBw4ce45bowxtCW8WqvdXeNgtDhw4cOC4xJFXE2ftqDxlSmg2ZcEDFg4cOHDg+HGOZOwg2UReoMzH4PI073GfOHDgwIHjxzna1lSOcrfg2JY1ceDAgQPHXY7NEEMRxuKtt1eVX8m1thMOHDhw4FgPNLRFvdlgxGa1fDCuvTwcOHDgwBFw/AMV6LstNPtMZQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVYAAAFWCAAAAAAXxOpfAAAF50lEQVR42u3ay27kSAwEQP//T88Cc1pgt+VMUj2jakefDEOPqigdEiS/vuLfr9+/f//96vffa/InX///+mnXz3m1zvzer3f8sGLFihUr1gew5kx30eSH0XIk1+d7Sdbz8plYsWLFihXrUayzULVZbruZ2b0JUHJI7QeEFStWrFixfh5rEmLye9vttRueobRrw4oVK1asWH8Oa1uCaTc8a9XM2irJlVixYsWKFevPYb2rHbJpnLRNlDy0bUozb+9lYcWKFStWrH+VNfklLZCf8PfNP6xYsWLFivWvsv4qf/vGTDvAkZd48qHP/XDnN0/DihUrVqxYD2HNl7hJcG2hZPPMtk2yKbV8Y4IVK1asWLEexZo3GPZYm2iVr20TxdqDj3pZWLFixYoV68NY23DTLn02NpGPVrS4s8NuPzisWLFixYr1LNaWchbFZm/ZHECL28a4l58XVqxYsWLFeghr3nqZhZjZUnLW9gjbFRahCitWrFixYj2QNQ8u+VjGLE61h9dGq81x1seDFStWrFixHss6o9lsMue7695Z8Cr+jxUrVqxYsR7Cmr9mj5s3UWbvvSuQtcTF54gVK1asWLE+jDVpJORDEi36puyyKQnNGkLFOAhWrFixYsV6CGtbRMhfOct3+UjEvqCzP6pvPkesWLFixYr18aybANEGo7btMTva4cBE+UFEvSysWLFixYr18azt0nOIe5sZOU3+EWxKNlH/CitWrFixYn08ax6DZtfkoPsxi9mHkuMWMyxYsWLFihXrIax3DTrsDyYvr7TFoFn8assrUakFK1asWLFifTDrJiq1WC3l7Dn7JtCstIQVK1asWLGewnrX0MNsIKONbgnQ/gD2AyJYsWLFihXrZ7DOyiubpkhb7mlHMZL1JPd+8zdWrFixYsV6LOtdoxLt38m277qmbeTk7RasWLFixYr1dNa8IbFpw9R9obLwkd+b/L/+mLBixYoVK9ZDWPdLnxVl9nztYe+bSUmBCStWrFixYj2LtQW6ptkElLvKNC1cXnApykNYsWLFihXrUaxtsGhDTAuRh7zZyEUemPI1vKxgYcWKFStWrIewzuLRZhTjrresCMpBkChHYcWKFStWrIewzl6ZR5zZIGOO0oa5dgijLdlgxYoVK1asJ7JGcWHdpMlZ27jWoue4sxEQrFixYsWK9RTWTTRJChD7UYy28NFGpX37BytWrFixYv0k1nzbm8PYtGFma96MgORvx4oVK1asWM9izdsneQFl1nqZhafVti9LKknBpRi/wIoVK1asWB/J2sagtsgy214elfK7ZqMesyuxYsWKFSvWU1jbgYP29W1p5nrp72iuzGJivi+sWLFixYr1+az7INVGpWuyfBvJc2bHNguLWLFixYoV61ms+2ZJ8sp8S3fFputQmMfKITFWrFixYsV6CGsSU2YDFvvhy1nMyltHm7ZNESixYsWKFSvWw1nbSLQZ4sw3mW+sbfwkq8WKFStWrFg/gzXZ6qyVshmdbEcl2sJKQpOHy/+5BitWrFixYj2EtW1LzAolySJm4xGzN86uzFeLFStWrFixnsiabKYdqpgNarTjEclzNq2UPG5ixYoVK1asJ7LmEecdKLMyR1tYyUs2+08EK1asWLFiPYt11hqZxbI6oJQjGm1JpeUriLFixYoVK9ZDWO8aYcxDWDs2kR/5rCS0GTq5OclixYoVK1asf5C1DRazAYg81mw2k5dj7gpML4tEWLFixYoV6wexboYPEuhZy6eFuG7t5LuI7sKKFStWrFgPYc1/7VZnMwnJKMYmYM2GQvZrwIoVK1asWJ/Mem+p5X3FkVkRpw1AbfgbplesWLFixYr1YaybdkVSXpltKb9r31wZlkvazWDFihUrVqzHss62d33NDOI6qOWIeeDLiy9YsWLFihXrZ7MmW2qjT7Hc+MjvDYX154IVK1asWLEexTqLI5vQk9clZvSzkYtNW+jrrpSHFStWrFix/kHWzVBCDteOYmz+k69kFgSTJ2DFihUrVqyPZ/0HoLaZFpRSD84AAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>mysql常用语法学习上 | Emilyty | software testing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#2E3032">
+    
+    
+    <meta name="keywords" content="mysql">
+    <meta name="description" content="开始前的准备事项，第0天 ， 开始之前的，前置准备事项： 1、在自己电脑上安装一个mysql数据库，文章见 -&gt; http:&#x2F;&#x2F;istester.com&#x2F;article&#x2F;258.html 2、找一个mysql客户端链接工具：推荐workbench ，安装包 http:&#x2F;&#x2F;istester.com&#x2F;article&#x2F;405.html &#x2F; 第1天作业 ， 1）创建数据库 istester 2）查看">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql常用语法学习上">
+<meta property="og:url" content="https://emilyty.github.io/2020/11/16/mysql%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B8%8A/index.html">
+<meta property="og:site_name" content="Emilyty">
+<meta property="og:description" content="开始前的准备事项，第0天 ， 开始之前的，前置准备事项： 1、在自己电脑上安装一个mysql数据库，文章见 -&gt; http:&#x2F;&#x2F;istester.com&#x2F;article&#x2F;258.html 2、找一个mysql客户端链接工具：推荐workbench ，安装包 http:&#x2F;&#x2F;istester.com&#x2F;article&#x2F;405.html &#x2F; 第1天作业 ， 1）创建数据库 istester 2）查看">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-16T05:35:47.000Z">
+<meta property="article:modified_time" content="2020-11-16T05:40:53.418Z">
+<meta property="article:author" content="Emilyty">
+<meta property="article:tag" content="mysql">
+<meta name="twitter:card" content="summary">
+    
+        <link rel="alternate" type="application/atom+xml" title="Emilyty" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/back.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/header.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Emilyty</h5>
+          <a href="mailto:emilyty@163.com" title="emilyty@163.com" class="mail">emilyty@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/emilyty" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://blog.csdn.net/emilyty" target="_blank" >
+                <i class="icon icon-lg icon-CSDN"></i>
+                CSDN
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">mysql常用语法学习上</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">mysql常用语法学习上</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-11-16T05:35:47.000Z" itemprop="datePublished" class="page-time">
+  2020-11-16
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+
+<article id="post-mysql常用语法学习上"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">mysql常用语法学习上</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-11-16 13:35:47" datetime="2020-11-16T05:35:47.000Z"  itemprop="datePublished">2020-11-16</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>开始前的准备事项，第0天 ，</p>
+<p>开始之前的，前置准备事项：</p>
+<p>1、在自己电脑上安装一个mysql数据库，文章见 -&gt; <a target="_blank" rel="noopener" href="http://istester.com/article/258.html">http://istester.com/article/258.html</a></p>
+<p>2、找一个mysql客户端链接工具：推荐workbench ，<a target="_blank" rel="noopener" href="http://istester.com/zhiye/415.html">安装包</a> <a target="_blank" rel="noopener" href="http://istester.com/article/405.html">http://istester.com/article/405.html</a></p>
+<p>/</p>
+<p>第1天作业 ，</p>
+<p>1）创建数据库 istester</p>
+<p>2）查看数据库创建是否成功</p>
+<p>/</p>
+<p>第2天作业 ，</p>
+<p>在昨天创建的isTester数据库下，创建 表 istester 和 表 idoxu</p>
+<p>注：SQL的作业，前几天的 库、表，都是打基础；没有这些，后面的增删改查，你也没法玩 ；</p>
+<p>1）isTester表的字段、类型、属性：</p>
+<p>id INT(10) NOT NULL UNIQUE PRIMARY KEY ,</p>
+<p>uname VARCHAR(20) NOT NULL ,</p>
+<p>sex VARCHAR(4) ,</p>
+<p>birth YEAR,</p>
+<p>department VARCHAR(20) ,</p>
+<p>address VARCHAR(50) ,</p>
+<p>idoxu VARCHAR(20) </p>
+<p>2）idoxu表的字段、类型、属性：</p>
+<p>id INT(10) NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT ,</p>
+<p>stu_id INT(10) NOT NULL ,</p>
+<p>c_name VARCHAR(20) ,</p>
+<p>istester VARCHAR(50) ,</p>
+<p>grade INT(10)</p>
+<p>前一天作业答案参考 ，</p>
+<p>1）创建数据库 istester</p>
+<p>DROP DATABASE IF EXISTS istester;</p>
+<p>CREATE DATABASE IF NOT EXISTS istester;</p>
+<p>2）查看数据库创建是否成功</p>
+<p>show DATABASES;</p>
+<p>/</p>
+<p>第3天作业 ，</p>
+<p>根据已有的表istester 和 idoxu 创建新表（复制表）</p>
+<p>1）复制istester表结构，创建新表istester2</p>
+<p>注：可以有两种方式</p>
+<p>2）复制idoxu表结构和数据，创建新表idoxu2</p>
+<p>3）复制idoxu表结构的 id,stu_id,istester三个字段，创建新表idoxu3</p>
+<p>前一天作业答案参考 ，</p>
+<p>创建istester和idoxu表</p>
+<p>CREATE TABLE istester (</p>
+<p>id INT(10) NOT NULL UNIQUE PRIMARY KEY ,</p>
+<p>uname VARCHAR(20) NOT NULL ,</p>
+<p>sex VARCHAR(4) ,</p>
+<p>birth YEAR,</p>
+<p>department VARCHAR(20) ,</p>
+<p>address VARCHAR(50) ,</p>
+<p>idoxu VARCHAR(20) </p>
+<p>);</p>
+<p>CREATE TABLE idoxu (</p>
+<p>id INT(10) NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT ,</p>
+<p>stu_id INT(10) NOT NULL ,</p>
+<p>c_name VARCHAR(20) ,</p>
+<p>istester VARCHAR(50) ,</p>
+<p>grade INT(10)</p>
+<p>);</p>
+<p>/</p>
+<p>第4天作业 ，</p>
+<p>1）删除表 istester2</p>
+<p>2）同时删除表idoxu2和idoxu3</p>
+<p>3）查看还有哪些表</p>
+<p>前一天作业答案参考 ，</p>
+<p>1）复制istester表结构，创建新表istester2</p>
+<p>注：可以有两种方式</p>
+<p>create table istester2 like istester ;</p>
+<p>或</p>
+<p>create table idoxu2 as select * from idoxu where 2=1;</p>
+<p>2）复制idoxu表结构和数据，创建新表idoxu3</p>
+<p>create table idoxu3 as select * from idoxu</p>
+<p>3）复制idoxu表结构的 id,stu_id,istester三个字段，创建新表idoxu3</p>
+<p>create table idoxu3 as select id,stu_id,istester from idoxu where 1&lt;&gt;1;</p>
+<p>/</p>
+<p>第5天作业 ，</p>
+<p>1）修改istester表，添加一个字段istester6 （字符类型VARCHAR，长度100，不允许为空）</p>
+<p>2）查看字段istester6 ，是否添加成功 </p>
+<p>3）修改istester表，删除字段istester6</p>
+<p>4）确认字段istester6 ，是否删除成功</p>
+<p>前一天作业答案参考 ，</p>
+<p>1）删除表 istester2</p>
+<p>drop table istester2 ;</p>
+<p>2）同时删除表idoxu2和idoxu3</p>
+<p>drop table idoxu2,idoxu3 ;</p>
+<p>3）查看还有哪些表</p>
+<p>show tables;</p>
+<p>/</p>
+<p>第6天作业 ，</p>
+<p>插入 insert：</p>
+<p>1）向表istester插入数据</p>
+<p>id = 1 ,uname = idoxu ,idoxu = 2020</p>
+<p>id = 2 ,uname = idoxu2 ,idoxu = 2020</p>
+<p>id=11,uname = idoxu3,sex=1</p>
+<p>id=12,uname = idoxu4,sex=2</p>
+<p>id=13,uname = idoxu5,sex=1</p>
+<p>id=14,uname = idoxu6,sex=2</p>
+<p>2）向表idoxu插入数据</p>
+<p>id=4,stu_id=11,c_name=idoxu,grade=90</p>
+<p>id=5,stu_id=12,c_name=lin,grade=100</p>
+<p>id=6,stu_id=33,c_name=istester,grade=20</p>
+<p>前一天作业答案参考 ，</p>
+<p>1）修改istester表，添加一个字段istester6 （字符类型VARCHAR，长度100，不允许为空）</p>
+<p>ALTER table istester add column istester6 VARCHAR(100) NOT NULL;</p>
+<p>2）查看字段istester6 ，是否添加成功</p>
+<p>desc istester</p>
+<p>3）修改istester表，删除字段istester6</p>
+<p>ALTER table istester drop istester6</p>
+<p>4）确认字段istester6 ，是否删除成功</p>
+<p>desc istester</p>
+<p>/</p>
+<p>第7天作业 ，</p>
+<p>1）查询istester表 id = 1 的内容</p>
+<p>2）查询idoxu 表 grade=100 的内容</p>
+<p>前一天作业答案参考 ，</p>
+<p>插入 insert：</p>
+<p>1）向表istester插入数据</p>
+<p>id = 1 ,uname = idoxu ,idoxu = 2020</p>
+<p>id = 2 ,uname = idoxu2 ,idoxu = 2020</p>
+<p>id=11,uname = idoxu3,sex=1</p>
+<p>id=12,uname = idoxu4,sex=2</p>
+<p>id=13,uname = idoxu5,sex=1</p>
+<p>id=14,uname = idoxu6,sex=2</p>
+<p>2）向表idoxu插入数据</p>
+<p>id=4,stu_id=11,c_name=idoxu,grade=90</p>
+<p>id=5,stu_id=12,c_name=lin,grade=100</p>
+<p>id=6,stu_id=33,c_name=istester,grade=20</p>
+<p>参考语句：</p>
+<p>insert into istester(id,uname,idoxu) values(1,”idoxu”,2020);</p>
+<p>insert into istester(id,uname,idoxu) values(2,”idoxu2”,2020);</p>
+<p>insert into istester(id,uname,sex) values(11,”idoxu3”,1),(12,”idoxu4”,2),(13,”idoxu5”,1),(14,”idoxu6”,2);</p>
+<p>insert into idoxu(id,stu_id,c_name,grade) values(4,11,”idoxu”,90),(5,12,”lin”,100),(6,33,”istester”,20);</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <footer>
+        <a href="https://emilyty.github.io">
+            <img src="/img/header.jpg" alt="Emilyty">
+            Emilyty
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://emilyty.github.io/2020/11/16/mysql%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B8%8A/&title=《mysql常用语法学习上》 — Emilyty&pic=https://emilyty.github.io/img/header.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://emilyty.github.io/2020/11/16/mysql%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B8%8A/&title=《mysql常用语法学习上》 — Emilyty&source=software testing" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://emilyty.github.io/2020/11/16/mysql%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B8%8A/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《mysql常用语法学习上》 — Emilyty&url=https://emilyty.github.io/2020/11/16/mysql%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B8%8A/&via=https://emilyty.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://emilyty.github.io/2020/11/16/mysql%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B8%8A/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2020/11/16/mysql%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B8%AD/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">mysql常用语法学习中</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/11/16/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%B8%B8%E7%94%A8linux%E5%91%BD%E4%BB%A4/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">软件测试常用linux命令</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "9boq338fRwIVpDjInlL3jYE0-gzGzoHsz",
+            appKey: "OKTbIXukavfdcKw2c1MQyyfg",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        thanks
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Emilyty &copy; 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://emilyty.github.io/2020/11/16/mysql%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B8%8A/&title=《mysql常用语法学习上》 — Emilyty&pic=https://emilyty.github.io/img/header.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://emilyty.github.io/2020/11/16/mysql%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B8%8A/&title=《mysql常用语法学习上》 — Emilyty&source=software testing" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://emilyty.github.io/2020/11/16/mysql%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B8%8A/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《mysql常用语法学习上》 — Emilyty&url=https://emilyty.github.io/2020/11/16/mysql%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B8%8A/&via=https://emilyty.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://emilyty.github.io/2020/11/16/mysql%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B8%8A/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADMUlEQVR42u3awW7bQAwE0Pz/T7vXBmnkGdJGo83TKUgVa98KKM3hfnzE1+PLdf377/716z1/33n99K+fmfzt6sLGxsa+CftxeX330ddbcL3ozc/Xa0ss2NjY2Keyk7Jxzc6LTbLotojmFmxsbGzsthnIy2HewOSFFhsbGxu7LTxJxJOXxk05xMbGxv5t7CRUagtVGwzNNvftWRo2Njb2j2fnU9Gf//Nb5tvY2NjYP5j9KK/8kE1brvLyub+wsbGxT2LPjuy0x3SS0L8NpJKxwZNoCRsbG/sIdh4S5bF7HtZvBgOzIz7Y2NjYZ7NzXtuotIAc024KNjY29nns9jjOrLC197TPmj0FGxsb+yT27Khl3pa0mzgLtoZHdrCxsbEPYuf/6W/Ys4g/aXVmhRYbGxv77uw2GEoWtI+K2qCqXi02Njb2oexkEW2xebzomjVL324NNjY29kHsfXvQNi15AdsMcfOmCBsbG/sM9ibcaUvL+7a4HQBjY2Njn8HOv7K3w9r9YZ3Z6OIF7xkbGxv7tuw21mmjnDZ+mo2fh4NebGxs7Nuy6zA9LoGbQzyz4tRuHDY2NvZJ7Hy4u2Ek2zRrOfIXgI2NjX0qux2XtlF+26i0Lc2sEcLGxsY+iZ3g66/45XGc9p58DU9KJjY2NvbN2bMwaDMSaPP5vLzlW4CNjY19Knv21b942AicB0/FqrCxsbEPYufFZhbfPxZXUtLaeOvJeSVsbGzsm7PzEKdtD9oSmK8nf0nRe8PGxsa+IXtzpGa2fbOx7n6M8en32NjY2Aex26XPJsmvKlRthFS8QmxsbOwj2G2pmEU8syfOhhBRu4KNjY19BDuJ1POR8H4wkHxa25wU4wFsbGzs27Jng968GZgNIfL769ViY2NjH8HexPf7BGtTutrN/fRX2NjY2AexN3WvfcysXdmMfvOgChsbG/vu7LaQtO3E/4qcomM62NjY2AexZ5PQTYXMR7Oz2vvkxWBjY2P/Yvb1/UkJ2QdAbUn7x6dhY2Nj/2L2LHiaBUbvKGPY2NjYp7JnwU0e0M82ZRYwRW0PNjY29kHsvAxsPmLWeLyqKCYFEhsbG/uG7D/HuVVQm5l98AAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '每天积累一点点';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '测试经验分享';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
