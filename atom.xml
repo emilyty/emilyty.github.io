@@ -6,7 +6,7 @@
   <link href="https://emilyty.github.io/atom.xml" rel="self"/>
   
   <link href="https://emilyty.github.io/"/>
-  <updated>2021-02-02T07:58:17.308Z</updated>
+  <updated>2021-02-02T10:23:13.132Z</updated>
   <id>https://emilyty.github.io/</id>
   
   <author>
@@ -17,13 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hexo+github新建文章和发布的方式</title>
+    <link href="https://emilyty.github.io/2021/02/02/hexo-github%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0%E5%92%8C%E5%8F%91%E5%B8%83%E7%9A%84%E6%96%B9%E5%BC%8F/"/>
+    <id>https://emilyty.github.io/2021/02/02/hexo-github%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0%E5%92%8C%E5%8F%91%E5%B8%83%E7%9A%84%E6%96%B9%E5%BC%8F/</id>
+    <published>2021-02-02T10:11:40.000Z</published>
+    <updated>2021-02-02T10:23:13.132Z</updated>
+    
+    <content type="html"><![CDATA[<p>window命令行进入hexo所在的目录C:\gitHubBlog\hexo</p><p>hexo s #启动hexo，通过<a href="http://localhost:4000/">http://localhost:4000/</a> 预览本地博客内容</p><img src="image-20210202181518663.png" alt="image-20210202181518663" style="zoom:50%;" /><p>hexo new “文章名称” #新建文章，文章所在目录C:\gitHubBlog\hexo\source_posts</p><img src="image-20210202181657781.png" alt="image-20210202181657781" style="zoom:50%;" /><p>hexo new page “新的页面” #新页面还不知道怎么用<br>hexo g #文章编辑完成后，发布前生成静态页面至public目录</p><img src="image-20210202181742192.png" alt="image-20210202181742192" style="zoom:50%;" /><p>hexo d #提交到github上，然后就可以通过gitHub上的<a href="https://emilyty.github.io/%E8%AE%BF%E9%97%AE%E5%9C%A8%E7%BA%BF%E5%8D%9A%E5%AE%A2">https://emilyty.github.io/访问在线博客</a></p><img src="image-20210202181921795.png" alt="image-20210202181921795" style="zoom:50%;" />]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;window命令行进入hexo所在的目录C:\gitHubBlog\hexo&lt;/p&gt;
+&lt;p&gt;hexo s #启动hexo，通过&lt;a href=&quot;http://localhost:4000/&quot;&gt;http://localhost:4000/&lt;/a&gt; 预览本地博客内容&lt;/p&gt;
+&lt;</summary>
+      
+    
+    
+    
+    <category term="工具" scheme="https://emilyty.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="搭建GitHub博客" scheme="https://emilyty.github.io/tags/%E6%90%AD%E5%BB%BAGitHub%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>jmeter之time和timeShift函数</title>
     <link href="https://emilyty.github.io/2021/02/02/jmeter%E7%9A%84time%E5%92%8CtimeShift%E5%87%BD%E6%95%B0/"/>
     <id>https://emilyty.github.io/2021/02/02/jmeter%E7%9A%84time%E5%92%8CtimeShift%E5%87%BD%E6%95%B0/</id>
     <published>2021-02-02T06:09:06.000Z</published>
-    <updated>2021-02-02T07:58:17.308Z</updated>
+    <updated>2021-02-02T10:12:19.145Z</updated>
     
-    <content type="html"><![CDATA[<p><font color=black size=5><strong>time函数</strong></font></p><hr><p>该函数可获取系统当前时间。默认的情况下获取的是当前时间戳。</p><p>该函数有两个参数可填。</p><div align=center>     <img src="time.jpg" alt="time" style="zoom:50%;" /></div><p>第一个参数是格式化当前时间，填写后返回对应格式的时间。</p><p>第二个函数是设置变量名称的函数，可以通过这个变量调用返回的值。</p><p>如图所示：</p><div align=center>     <img src="image-20210202153624813.png" alt="20210202153624813" style="zoom:50%;" /></div><p><font color=black size=5><strong>timeShift函数</strong></font></p><hr><p>该函数可以实现时间位移。该函数默认也是获取当前时间戳。</p><div align=center>     <img src="timeShift.jpg" alt="timeShift" style="zoom:50%;" /></div><p>第一个参数是格式化时间。填写后返回对应格式的时间，如果不填写返回时间戳。</p><p>我需要常用的格式：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$&#123;__timeShift(yyyy&#x2F;MM&#x2F;dd HH:mm:ss:SSS,,,,)&#125;</span><br><span class="line">$&#123;__timeShift(yyyy&#x2F;MM&#x2F;dd HH:mm:ss,,,,)&#125;</span><br><span class="line">$&#123;__timeShift(yyyy-MM-dd&#39;T&#39;HH:mm:ss:SSS&#39;Z&#39;,,,,)&#125;</span><br><span class="line">$&#123;__timeShift(yyyy-MM-dd HH:mm:ss:SSS,,,,)&#125;</span><br><span class="line">$&#123;__timeShift(yyyy-MM-dd&#39;T&#39;HH:mm:ss:SSS+08:00,,,,)&#125;</span><br></pre></td></tr></table></figure><p>第二个参数，没发现什么用处。</p><p>第三个参数是时间位移。“-”表示减时间，“+”或者无符号表示加时间。大写“P”为固定前缀，【D,H,M,S】为时间单位。”D”为天，“H”为小时，“M”为分钟，“S”为秒。单位是【 H\M\S】的情况下必须使用”T”。例如,</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">减2个小时：&quot;-PT2H&quot;</span><br><span class="line">加2分钟：&quot;PT2M&quot;</span><br><span class="line">加2秒：&quot;PT2S&quot;</span><br><span class="line">加2天：”P2D“</span><br></pre></td></tr></table></figure><p>第四个参数，区域语言设置。</p><p>第五个参数，跟time的第二个函数同义。</p>]]></content>
+    <content type="html"><![CDATA[<p><font color=black size=5><strong>time函数</strong></font></p><hr><p>该函数可获取系统当前时间。默认的情况下获取的是当前时间戳。</p><p>该函数有两个参数可填。</p><div align=center>     <img src="time.jpg" alt="time" style="zoom:50%;" /></div><p>第一个参数是格式化当前时间，填写后返回对应格式的时间。</p><p>第二个函数是设置变量名称的函数，可以通过这个变量调用返回的值。</p><p>如图所示：</p><div align=center>     <img src="image-20210202153624813.png" alt="20210202153624813" style="zoom:50%;" /></div><font color=black size=5>**timeShift函数**</font><hr><p>该函数可以实现时间位移。该函数默认也是获取当前时间戳。</p><div align=center>     <img src="timeShift.jpg" alt="timeShift" style="zoom:50%;" /></div><p>第一个参数是格式化时间。填写后返回对应格式的时间，如果不填写返回时间戳。</p><p>我需要常用的格式：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$&#123;__timeShift(yyyy&#x2F;MM&#x2F;dd HH:mm:ss:SSS,,,,)&#125;</span><br><span class="line">$&#123;__timeShift(yyyy&#x2F;MM&#x2F;dd HH:mm:ss,,,,)&#125;</span><br><span class="line">$&#123;__timeShift(yyyy-MM-dd&#39;T&#39;HH:mm:ss:SSS&#39;Z&#39;,,,,)&#125;</span><br><span class="line">$&#123;__timeShift(yyyy-MM-dd HH:mm:ss:SSS,,,,)&#125;</span><br><span class="line">$&#123;__timeShift(yyyy-MM-dd&#39;T&#39;HH:mm:ss:SSS+08:00,,,,)&#125;</span><br></pre></td></tr></table></figure><p>第二个参数，没发现什么用处。</p><p>第三个参数是时间位移。“-”表示减时间，“+”或者无符号表示加时间。大写“P”为固定前缀，【D,H,M,S】为时间单位。”D”为天，“H”为小时，“M”为分钟，“S”为秒。单位是【 H\M\S】的情况下必须使用”T”。例如,</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">减2个小时：&quot;-PT2H&quot;</span><br><span class="line">加2分钟：&quot;PT2M&quot;</span><br><span class="line">加2秒：&quot;PT2S&quot;</span><br><span class="line">加2天：”P2D“</span><br></pre></td></tr></table></figure><p>第四个参数，区域语言设置。</p><p>第五个参数，跟time的第二个函数同义。</p>]]></content>
     
     
       
